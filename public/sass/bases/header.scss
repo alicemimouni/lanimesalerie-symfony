@@ -48,7 +48,15 @@ body {
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
                 margin-bottom: 1rem;
+                // icons card login search
+                .icons {
+                    margin-right: 1rem;
+                    img {
+                        margin-right: 0.5rem
+                    }
+                }
                 // mobile navbar
                 .navbar-mobile {
                     .myNavBar {

@@ -56,10 +56,10 @@ class ProductRepository extends ServiceEntityRepository
     }
     */
 
-    // BARRE DE RECHERCHE
-    // #################
+    // searchbar
+    // #########
     public function search($filtres) {
-        $query = $this->createQueryBuilder('p')->join('p.id', 'category');
+        $query = $this->createQueryBuilder('p')->join('p.categories', 'category');
         if(!empty($filtres['searchBar'])) {
             $query->where('p.title LIKE :search')
             ->orWhere('p.description LIKE :search')

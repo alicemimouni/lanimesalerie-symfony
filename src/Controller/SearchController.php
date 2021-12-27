@@ -26,7 +26,7 @@ class SearchController extends AbstractController
             // $products = $productRepository->findAll();
             $products = [];
         }
-//RETOURNE LES PRODUITS
+        //return all products
         return $this->render('search/index.html.twig', [
             'form' => $form->createView(),
             'products' => $products
