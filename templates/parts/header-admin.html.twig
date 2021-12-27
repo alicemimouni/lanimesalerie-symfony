@@ -1,0 +1,58 @@
+<div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <!--CATEGORIES-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white pl-3" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Catégories
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+                        <li><a class="dropdown-item" href="{{ path('category_index') }}">Toutes les catégories</a></li>
+                        <li><a class="dropdown-item" href="{{ path('category_new') }}">Ajouter une catégorie</a></li>
+                    </ul>
+                </li>
+                <!--ARTICLES-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Articles
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+                        <li><a class="dropdown-item" href="{{ path('product_index') }}">Tous les articles</a></li>
+                        <li><a class="dropdown-item" href="{{ path('product_new') }}">Ajouter un article</a></li>
+                    </ul>
+                </li>
+                <!--UTILISATEURS-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Utilisateurs
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+                        <li><a class="dropdown-item" href="{{ path('user_index') }}">Tous les utilisateurs</a></li>
+                        <li><a class="dropdown-item" href="{{ path('user_new') }}">Ajouter un utilisateur</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="collapse navbar-collapse d-flex justify-content-end">
+            <ul class="navbar-nav">
+                <!--TABLEAU DE BORD-->
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Tableau de bord</a>
+                </li>
+                <!--DECONNEXION-->
+                <li class="nav-item">
+                    <a class="nav-link colorBaseText mr-2" href="{{ path('app_logout') }}">Déconnexion</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+</div>

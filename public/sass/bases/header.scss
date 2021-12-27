@@ -1,0 +1,142 @@
+//HEADER
+body {
+    #header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        header {
+             //div qui englobe les ul et li
+             #navbarNav {
+                ul {
+                    li {
+                        text-transform: uppercase;
+                        font-size: 1.5rem;
+                    }
+                    li:last-child {
+                        margin-right: 0;
+                    }
+                }
+                background-color: white;
+                position: absolute;
+                right: 0px;
+                top: 8vh;
+                width: 10rem;
+                a {
+                    color: $color4;
+                    font-size: 1rem;
+                }
+                border-radius: 20px;
+                //   box-shadow: rgb(0 0 0 / 10%) 0px 1px 1em 0px;
+            }
+            .navPc {
+                width: 100%;
+            }
+            .navbar-nav {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+            #navBarr {
+                padding-right: 0.8rem;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            opacity: .9;
+            position: sticky;
+            top: -1px;
+            background-color: white;
+            z-index: 1;
+            width: 100%;
+            //BARRE LOGO CONNEXION PANIER NAV      
+            #pc_search {
+                width: 320px;
+            }
+            //NAVBAR MOBILE
+            .myNavBar {
+                .navbar-toggler {
+                    padding: 0;
+                    border: none;
+                }
+                .navbar-toggler:focus {
+                    box-shadow: none;
+                    padding: 0;
+                    line-height: 0;
+                }
+            }
+            // DIV LOGOS DE CONNEXION ET PANIER
+            .logos {
+                a {
+                    margin-right: 1.5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                display: flex;
+                .icon {
+                    width: 25px;
+                }
+            }
+            //LOGO LANIMESALERIE    
+            #logo {
+                width: 10rem;
+            }
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            button {
+                background-color: white;
+                border: none;
+            }
+            button:focus {
+                box-shadow: none;
+            }
+        }
+        //FIN HEADER
+        //recherche de produits
+        .search {
+            display: flex;
+            border: $borderStyle;
+            border-radius: $borderRadius;
+            width: 280px;
+            height: 2.5rem;
+            margin: 1rem;
+            button {
+                .icon {
+                    width: 20px;
+                }
+            }
+        }
+        //BARRE LIVRAISON RETOUR
+        #barDelivery {
+            .dNone {
+                display: none!important;
+            }
+            display: flex;
+            justify-content: space-between;
+            background-color: $color2;
+            margin-bottom: 1rem;
+            width: 100%;
+            .delRet {
+                p {
+                    margin: 1rem;
+                    padding-left: 1rem;
+                }
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                img {
+                    width: 40px;
+                    margin: 0.3rem 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{% extends 'base-admin.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <h1 class="mt-5 margin-left-none text-capitalize">Utilisateurs</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Civilité</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.isMan ? 'Mr' : 'Mme' }}</td>
+                {# <td>{{ user.roles ? user.roles|json_encode : '' }}</td> #}
+                <td>{{ user.lastname }}</td>
+                <td>{{ user.firstname }}</td>
+                {# <td>{{ user.birthDate ? user.birthDate|date('Y-m-d') : '' }}</td> #}
+                <td>
+                    <a href="{{ path('user_show', {'id': user.id}) }}">Voir</a>
+                    <span> | </span>
+                    <a class="text-capitalize" href="{{ path('user_edit', {'id': user.id}) }}">éditer</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="11">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a class="btn btn-outline-warning text-warning mb-5" href="{{ path('user_new') }}">Ajouter</a>
+</div>
+{% endblock %}

@@ -1,0 +1,34 @@
+#avis{
+    .container{
+        padding:0 1rem;
+        img{
+            float: left;
+        }
+        .profile{
+           // margin-right: 1rem;
+            width: 4rem;
+        }
+        .notice{
+            p{
+                margin: 0;
+            }
+            .noticeCom{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            text-align: left;
+            padding-left: 1rem;
+            margin: 2rem 0;
+            }
+        }
+        .notice:first-child{
+            .noticeCom{
+                margin-top: 0.5rem;
+            }
+        }
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

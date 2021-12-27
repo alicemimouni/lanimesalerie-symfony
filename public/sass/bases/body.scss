@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+
+    #bloc_page {
+        .dNone {
+            display: none;
+        }
+
+        h1 {
+            margin: 1rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        h2 {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        p {
+            margin: 0 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: $color4;
+        }
+
+        section {
+            width: 100%;
+        }
+
+        // SECTION A PROPOS
+        // ###############
+        #aPropos {
+            .dNone {
+                display: none;
+            }
+        }
+
+        // ############
+        // CLASSES CSS 
+        // ############
+
+        // AFFICHE IMAGE CAFE EN FOND
+        .background-cofee {
+            background-image: url('../../img/cafe-interface-admin.jpg');
+            background-size: cover;
+        }
+
+        // LAYOUT CLASSES 
+        // ###############
+        .margin-left-none {
+            margin-left: 0 !important;
+        }
+
+        #product_image {
+            margin-left: 7rem;
+        }
+
+        .input-checkbox input {
+            margin: 0.5rem;
+        }
+
+        .margin-right {
+            margin-right: 0.5rem;
+        }
+
+        // PAGE DETAIL PRODUCT
+        // ###################
+        .detail-product {
+            .image-product {
+                max-height: 500px;
+            }
+            .content-product{
+                margin-left: 5rem;
+                h2 {
+                    padding: 0;
+                    margin-bottom: 2rem;
+                }
+            }    
+        }
+    }
+}

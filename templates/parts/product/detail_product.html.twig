@@ -1,0 +1,35 @@
+{% extends 'base-site.html.twig' %}
+
+{% block body %}
+<div class="container detail-product mt-5 mb-5">
+    <div class="d-flex align-items-center">
+        <img class="m-2" src=" {{ asset('img/boutton-retour.svg') }} ">
+        {% for category in product.categories %}
+                {% if category.parent == false %}
+                <a href=" {{ path('products_by_category', {'category': category.id }) }} " class="text-decoration-underline">Retour à la liste des produits</a>
+                {% endif %}
+        {% endfor %}   
+    </div>
+    {# card detail product #}
+    <div class="d-flex m-3 card-product">
+        {% for image in product.images %}
+        <img class="image-product" src=" {{ asset('img/products/' ~ image.url) }} ">
+        {% endfor %}
+        <div class="content-product d-flex flex-column">
+            <h2 class="text-start"> {{ product.title }} </h2>
+            <h3 class="text-center colorBaseText mb-4"> {{ product.price }} €</h3>
+            <p class="m-0"> {{ product.description }} </p>
+            <a class="btn myBtn">Ajouter au panier</a>
+            <div class="d-flex align-items-center">
+                <img src=" {{ asset('img/check.svg') }} " width="15px"><p>Livraison 3 à 5 jours ouvrés</p>
+            </div>
+            <div class="d-flex align-items-center">
+                <img src=" {{ asset('img/check.svg') }} " width="15px"><p>Offerte dès 49&nbsp;€ d'achat&nbsp;!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'parts/home/newsletter.html.twig' %}
+
+{% endblock body %}

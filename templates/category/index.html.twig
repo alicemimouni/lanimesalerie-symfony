@@ -1,0 +1,44 @@
+{% extends 'base-admin.html.twig' %}
+
+{% block title %}Categories{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1 class="mt-5 margin-left-none">Catégories</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Identifiant</th>
+                <th>Date de début</th>
+                <th>Date de fin</th>
+                <th>Nom</th>
+                <th>Catégorie parente</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for category in categories %}
+            <tr>
+                <td>{{ category.id }}</td>
+                <td>{{ category.beginDate ? category.beginDate|date('Y-m-d') : '' }}</td>
+                <td>{{ category.endDate ? category.endDate|date('Y-m-d') : '' }}</td>
+                <td>{{ category.name }}</td>
+                <td>{{ category.parent }}</td>
+                <td>
+                    <a href="{{ path('category_show', {'id': category.id}) }}">Voir</a>
+                    <span> | </span>
+                    <a href="{{ path('category_edit', {'id': category.id}) }}">Editer</a>
+                </td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="6">Aucun résultat</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('category_new') }}" class="btn btn-outline-warning mt-5 text-warning">Créer une catégorie</a>
+</div>
+{% endblock %}

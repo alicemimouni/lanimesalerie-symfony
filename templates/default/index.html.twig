@@ -1,0 +1,54 @@
+{% extends 'base-site.html.twig' %}
+
+{% block head %}
+    {% block title %}
+        {{ parent() }}
+    {% endblock %}
+    {% block stylesheets %}
+        {{ parent() }}
+    {% endblock stylesheets %}
+{% endblock head %}
+
+{% block header %}
+         {{ parent() }}
+    {% endblock header %}
+
+    {% block body %}   
+        
+        {% block banner %}
+            {% include 'parts/home/banner.html.twig' %}
+        {% endblock banner %}
+
+        {% block bestSeller %}
+            {% include 'parts/home/bestseller.html.twig' %}
+        {% endblock bestSeller %}
+
+        {% block about %}
+            {% include 'parts/home/about.html.twig' %}
+        {% endblock about %}
+
+        {% block newsletter %}
+            {% include 'parts/home/newsletter.html.twig' %}
+        {% endblock newsletter %}
+
+        {% block notice %}
+            {% include 'parts/home/notice.html.twig' %}
+        {% endblock notice %}
+
+        {% block infos %}
+            {% include 'parts/home/infos.html.twig' %}
+        {% endblock infos %}
+
+    {% endblock body %}
+    
+    {% block footer %}
+        {% include 'parts/footer.html.twig' %}
+    {% endblock footer %}
+
+    {% block javascripts %}
+        {{ parent() }}
+    {% endblock javascripts %}
+
+
+
+

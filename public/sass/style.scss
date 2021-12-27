@@ -1,0 +1,37 @@
+// ########################
+//IMPORT SCSS FILES ######
+// #######################
+
+//bases
+@import "./bases/variables.scss";
+@import "./bases/typography.scss";
+@import "./bases/header.scss";
+@import "./bases/body.scss";
+@import "./bases/footer.scss";
+@import "./bases/responsive.scss";
+@import "./bases/colors.scss";
+
+//components
+@import "./components/buttons.scss";
+@import "./components/forms.scss";
+@import "./components/stars.scss";
+
+//home
+@import "./home/caroussel.scss";
+@import "./home/bestSeller.scss";
+@import "./home/about.scss";
+@import "./home/newsletter.scss";
+@import "./home/notices.scss";
+@import "./home/infos.scss";
+
+// products
+@import "./product/detail-product.scss";
+
+// ###########################
+//IMPORT POLICE OXYGEN #
+// ###########################
+
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
+
+

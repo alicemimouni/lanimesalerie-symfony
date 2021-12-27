@@ -1,0 +1,46 @@
+{% extends 'base-admin.html.twig' %}
+
+{% block title %}Produits{% endblock %}
+
+{% block body %}
+
+<div class="container mt-4">
+    <h1 class="mt-4">Tous les articles</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Intitulé</th>
+                <th scope="col">Prix</th>
+                <th scope="col">Référence</th>
+                <th scope="col">Description</th>
+                <th scope="col">En solde</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for product in products %}
+            <tr>
+                <td>{{ product.id }}</td>
+                <td>{{ product.title }}</td>
+                <td>{{ product.price }}</td>
+                <td>{{ product.reference }}</td>
+                <td>{{ product.description }}</td>
+                <td>{{ product.isonsale ? 'Oui' : 'Non' }}</td>
+                <td>
+                    <a href="{{ path('product_show', {'id': product.id}) }}">Voir</a>
+                    <span> | </span>
+                    <a class="text-capitalize" href="{{ path('product_edit', {'id': product.id}) }}">éditer</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a class="btn btn-outline-warning text-warning mt-4" href="{{ path('product_new') }}">Ajouter un article</a>
+</div>
+{% endblock %}

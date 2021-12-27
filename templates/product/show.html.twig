@@ -1,0 +1,72 @@
+{% extends 'base-admin.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+
+<div class="container mb-5">
+    <h1 class="mt-5 margin-left-none text-capitalize"> {{ product.title }} </h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ product.id }}</td>
+            </tr>
+            <tr>
+                <th>Intitulé</th>
+                <td>{{ product.title }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ product.price }}</td>
+            </tr>
+            <tr>
+                <th>Référence</th>
+                <td>{{ product.reference }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ product.description }}</td>
+            </tr>
+            <tr>
+                <th>Soldé</th>
+                <td>{{ product.isonsale ? 'Oui' : 'Non' }}</td>
+            </tr>
+            <tr>
+                <th>Catégories</th>
+                <td>
+                {% for category in product.categories %}
+                {{category.name}}
+                {% endfor %}
+                </td>
+            </tr>
+            <tr>
+                <th>Images</th>
+                <td>{% for image in product.images %}
+                    {{image.url}}
+                    {% endfor %}
+                </td>
+            </tr>
+            <tr>
+                <th>Marque</th>
+                <td>{{ product.brand }}</td>
+            </tr>
+            <tr>
+                <th>Date de début</th>
+                <td>{{ product.startDate|date('d/m/Y') }}</td>
+            </tr>
+            <tr>
+                <th>Date de fin</th>
+                <td>{{ product.endDate|date('d/m/Y') }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <a class="text-capitalize btn btn-outline-warning text-warning mt-4 mb-4" href="{{ path('product_edit', {'id': product.id}) }}">éditer</a>
+
+    {{ include('product/_delete_form.html.twig') }}
+
+     <a class="text-success"  href="{{ path('product_index') }}">Retour à la liste</a>
+
+</div>
+{% endblock %}

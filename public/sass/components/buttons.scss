@@ -1,0 +1,38 @@
+body {
+    #bloc_page {
+        .myBtn {
+            border-radius: $borderRadius;
+            padding: 0.7rem 1.3rem;
+            margin: 1rem 0;
+            background-color: $color1;
+            color: white;
+            input {
+                background-color: none;
+                border: none;
+            }
+        }
+        .btnS {
+            width: 10rem;
+        }
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+        .myBtn:hover {
+            background-color: transparent;
+            color: $color1;
+            border: 1px solid $color1;
+        }
+    
+        // BOUTTONS OUTLINE WARNING
+        // ########################
+        .btn-outline-warning:hover {
+            color: white !important;
+        }
+
+        .detail-product {
+            .btn {
+                margin: 3rem 0;
+            }
+        }
+    }
+}

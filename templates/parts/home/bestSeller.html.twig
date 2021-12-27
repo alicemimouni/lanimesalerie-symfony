@@ -1,0 +1,59 @@
+<section id="sales">
+
+    <h2>Meilleures ventes</h2>
+    <div id="gridSeller">
+        <!--grande image-->
+        <img class="dNone big" src=" {{ asset('img/products/arbre-a-chat-design-bois-rotin.png') }} " alt="Arbre à chat design" width="100%">
+        <!--fiches produits-->
+        <div class="product_card card1">
+            <img src=" {{ asset('img/products/panier_rex.png') }} " alt="Panier Rex">
+            <p>Panier rond Rex</p>
+            <div class="stars">
+                <img src=" {{ asset('img/yellow_star.svg') }}" alt="avis client">
+                <img src="{{ asset('img/yellow_star.svg') }}" alt="avis client">
+                <img src="{{ asset('img/yellow_star.svg') }}" alt="avis client">
+                <img src="{{ asset('img/yellow_star.svg') }}" alt="avis client">
+                <img src=" {{ asset('img/grey_star.svg') }} " alt="avis client">
+            </div>
+            <p>74,90 €</p>
+        </div>
+        <div class="product_card card2">
+            <img src=" {{ asset('img/products/niche-chien-interieur-boby.png') }} " alt="Niche Bobby">
+            <p>Niche Boby</p>
+            <div class="stars">
+                <img src="{{ asset('img/yellow_star.svg') }}" alt="avis client">
+                <img src="{{ asset('img/yellow_star.svg') }}" alt="avis client">
+                <img src="{{ asset('img/yellow_star.svg') }}" alt="avis client">
+                <img src="{{ asset('img/yellow_star.svg') }}" alt="avis client">
+                <img src=" {{ asset('img/grey_star.svg') }} " alt="avis client">
+            </div>
+            <p>109,90 €</p>
+        </div>
+        <div class="product_card card3">
+            <img src=" {{ asset('img/products/sac-foin-bamby-lapin-rongeur.png') }} " alt="">
+            <p>Sac à foin Bamby</p>
+            <div class="stars">
+                <img src="{{ asset('img/yellow_star.svg') }}" alt="avis client">
+                <img src="{{ asset('img/yellow_star.svg') }}" alt="avis client">
+                <img src="{{ asset('img/yellow_star.svg') }}" alt="avis client">
+                <img src="{{ asset('img/yellow_star.svg') }}" alt="avis client">
+                <img src="{{ asset('img/yellow_star.svg') }}" alt="avis client">
+            </div>
+            <p>23,90 €</p>
+        </div>
+        <div class="product_card card4">
+            <img src=" {{ asset('img/products/arbre-a-chat-case-cube-bois.png') }} " alt="Arbre à chat Case">
+            <p>Arbre à chat Case</p>
+            <div class="stars">
+                <img src="{{ asset('img/yellow_star.svg') }}" alt="avis client">
+                <img src="{{ asset('img/yellow_star.svg') }}" alt="avis client">
+                <img src="{{ asset('img/yellow_star.svg') }}" alt="avis client">
+                <img src="{{ asset('img/yellow_star.svg') }}" alt="avis client">
+                <img src=" {{ asset('img/grey_star.svg') }} " alt="avis client">
+            </div>
+            <p>89,90 €</p>
+        </div>
+    </div>
+    <a href=" {{ path('all_products') }} " class="myBtn" role="button">Tous nos produits</a>
+
+</section>

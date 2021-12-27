@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block head %}
+    {% block title %}
+        La Nîmes'alerie
+    {% endblock title %}
+    {% block stylesheets %}
+        {{ parent() }}
+    {% endblock stylesheets %}
+{% endblock head %}
+
+    {% block header %}
+    {{ render(controller('App\\Controller\\DefaultController::menuCategories')) }}
+        {# {% include 'parts/header.html.twig' %} #}
+    {% endblock header %}
+
+    {% block body %}   
+        
+    {% endblock body %}
+    
+    {% block footer %}
+        {% include 'parts/footer.html.twig' %}
+    {% endblock footer %}
+
+    {% block javascripts %}
+        {{ parent() }}
+    {% endblock javascripts %}
+
+
