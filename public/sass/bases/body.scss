@@ -1,14 +1,21 @@
 body {
+
     margin: 0;
     box-sizing: border-box;
 
     #bloc_page {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
         .dNone {
             display: none;
         }
-
         h1 {
             margin: 1rem;
+            margin-top: 0;
             margin-bottom: 2rem;
             text-align: center;
         }
@@ -65,21 +72,6 @@ body {
 
         .margin-right {
             margin-right: 0.5rem;
-        }
-
-        // PAGE DETAIL PRODUCT
-        // ###################
-        .detail-product {
-            .image-product {
-                max-height: 500px;
-            }
-            .content-product{
-                margin-left: 5rem;
-                h2 {
-                    padding: 0;
-                    margin-bottom: 2rem;
-                }
-            }    
         }
     }
 }

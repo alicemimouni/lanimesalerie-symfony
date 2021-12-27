@@ -1,12 +1,18 @@
-//HEADER
+// #######
+//HEADER #
+// #######
 body {
+    // header section
     #header {
+
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        // header
         header {
-             //div qui englobe les ul et li
+
              #navbarNav {
                 ul {
                     li {
@@ -27,7 +33,7 @@ body {
                     font-size: 1rem;
                 }
                 border-radius: 20px;
-                //   box-shadow: rgb(0 0 0 / 10%) 0px 1px 1em 0px;
+               
             }
             .navPc {
                 width: 100%;
@@ -42,7 +48,27 @@ body {
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
+                margin-bottom: 1rem;
+                // mobile navbar
+                .navbar-mobile {
+                    .myNavBar {
+                        ul {
+                            padding-left: 2rem;
+                            padding-bottom: 1rem;
+                        }
+                        .navbar-toggler {
+                            padding: 0;
+                            border: none;
+                        }
+                        .navbar-toggler:focus {
+                            box-shadow: none;
+                            padding: 0;
+                            line-height: 0;
+                        }
+                    }
+                }
             }
+
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -54,23 +80,13 @@ body {
             background-color: white;
             z-index: 1;
             width: 100%;
-            //BARRE LOGO CONNEXION PANIER NAV      
+
+            //logo connexion card nav bar    
             #pc_search {
                 width: 320px;
             }
-            //NAVBAR MOBILE
-            .myNavBar {
-                .navbar-toggler {
-                    padding: 0;
-                    border: none;
-                }
-                .navbar-toggler:focus {
-                    box-shadow: none;
-                    padding: 0;
-                    line-height: 0;
-                }
-            }
-            // DIV LOGOS DE CONNEXION ET PANIER
+            
+            // commexion and card bar
             .logos {
                 a {
                     margin-right: 1.5rem;
@@ -83,7 +99,7 @@ body {
                     width: 25px;
                 }
             }
-            //LOGO LANIMESALERIE    
+            //logo lanimesalerie   
             #logo {
                 width: 10rem;
             }
@@ -98,8 +114,8 @@ body {
                 box-shadow: none;
             }
         }
-        //FIN HEADER
-        //recherche de produits
+        
+        //searchbar product
         .search {
             display: flex;
             border: $borderStyle;
@@ -113,7 +129,7 @@ body {
                 }
             }
         }
-        //BARRE LIVRAISON RETOUR
+        //delivery return bar
         #barDelivery {
             .dNone {
                 display: none!important;

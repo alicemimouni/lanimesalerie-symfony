@@ -1,17 +1,17 @@
 //RESPONSIVE
 
-//#####################
-//A PARTIR DE 1050 PX
+
+//MIN 1050 PX
 //####################
 @media screen and (min-width:1050px) {
 
-    //SECTION MEILLEURES VENTES
     #bloc_page {
+        
+        //best sellers section
         #sales {
             .dNone {
                 display: flex;
             }
-
             #gridSeller {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
@@ -19,27 +19,23 @@
                 grid-gap: 15px;
                 margin-bottom: 2rem;
 
-                //GRANDE IMAGE
+                // big image
                 .big {
                     grid-column: 1/3;
                     grid-row: 1/3;
                 }
-
                 .card1 {
                     grid-column: 3/4;
                     grid-row: 1/2;
                 }
-
                 .card2 {
                     grid-column: 4/5;
                     grid-row: 1/2;
                 }
-
                 .card3 {
                     grid-column: 3/4;
                     grid-row: 2/3;
                 }
-
                 .card4 {
                     grid-column: 4/5;
                     grid-row: 2/3;
@@ -50,10 +46,12 @@
 }
 
 //#####################
-//A PARTIR DE 990 PX
+//MIN 990 PX
 //####################
 @media screen and (min-width:990px) {
+
     #bloc_page {
+
         #header {
             .dNonePc {
                 display: none;
@@ -66,61 +64,58 @@
             .dNone {
                 display: flex;
             }
-
             #aboutText {
                 width: 50%;
             }
         }
-
-        // #newsletter{
-        //     background-image: url('../../../img/background_newsletter.png');
-        //     background-repeat: no-repeat;
-        //     background-size: cover;
-        // }
     }
 }
 
 //######################
-//A PARTIR DE 800 PX
+//MIN 800 PX
 //#########################
 @media screen and (min-width:800px) {
-    #bloc_page {
-        .dNone {
-            display: flex;
-        }
-        body {
-            #bloc_page {
-                .dNonePc {
-                    display: none;
-                }
-                //LOGOS CONNEXION eT PANIER
-                header {
-                    .dNone {
-                        display: flex;
-                    }
-                    .logos {
-                        margin-right: 2rem;
-                        .icon,
-                        button .icon {
-                            width: 30px;
-                        }
-                    }
-                }
-                //LOGO HAUT DE PAGE RETOUR GRATUIT
-                .delRet {
+
+    body {
+
+        #bloc_page {
+
+            .dNonePc {
+                display: none;
+            }
+            .dNone {
+                display: flex;
+            }
+            // card commexion logos
+            header {
+                .dNone {
                     display: flex;
                 }
-                // SECTION INFOS
-                #infos {
-                    flex-direction: row;
-                    justify-content: space-around;
-                }
-                //SECTION AVIS CLIENTS
-                #avis {
-                    .container {
-                        display: grid;
-                        grid-template-columns: repeat(2, 1fr);
+                .logos {
+                    margin-right: 2rem;
+                    .icon,
+                    button .icon {
+                        width: 30px;
                     }
+                }
+            }
+            // return delivery bar
+            #barDelivery {
+                .delRet {
+                    display: flex!important;
+                }
+            }
+            
+            // infos section
+            #infos {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            //notices customers
+            #avis {
+                .container {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
                 }
             }
         }
@@ -128,24 +123,22 @@
 }
 
 
-//A PARTIR DE 620 PX
+//MIN 620 PX
 @media screen and (min-width:620px) {
 
     #bloc_page {
+
         h1 {
             text-transform: uppercase;
         }
-
         h2 {
             font-size: 2rem;
         }
-
         #navBarr {
             #logo {
                 width: 15rem;
                 margin-bottom: 1rem;
             }
-
             .logos {
                 button {
                     margin-right: 2rem;
@@ -153,14 +146,14 @@
             }
         }
 
-        //SECTION AVIS
+        // notice customers section
         #avis {
             .profile {
                 width: 5rem;
             }
         }
 
-        //FOOTER
+        //footer
         footer {
             flex-direction: row;
             flex-wrap: wrap;
@@ -180,10 +173,13 @@
     }
 }
 
-//A PARTIR DE 400PX
+//MIN 400PX
 @media screen and (min-width:400px) {
+
     body {
+
         #bloc_page {
+
             header {
                 #navBarr {
                     .logos {
@@ -194,7 +190,7 @@
                 }
             }
 
-            //CAROUSEL
+            //carousel
             #banner {
                 .carousel {
                     height: initial;
