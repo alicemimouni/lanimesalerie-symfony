@@ -1,17 +1,14 @@
-{% extends 'base.html.twig' %}
+{% extends 'base-site.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}Inscription{% endblock %}
 
 {% block body %}
-    <h1>Register</h1>
-
+<div class="container register m-4 mt-0">
+    <h2 class="colorBaseText">Inscription</h2>
     {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
-
-        <button type="submit" class="btn">Register</button>
+    
     {{ form_end(registrationForm) }}
+
+    <button type="submit" class="btn colorBaseBgd text-white mt-3 mb-3">S'inscrire</button>
+</div>
 {% endblock %}

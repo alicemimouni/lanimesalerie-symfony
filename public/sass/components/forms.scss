@@ -1,4 +1,4 @@
-// INPUT TYPE TEXT
+// input type text
 .inputs{
     border-radius: $borderRadius;
     padding: 0.5rem 1rem;
@@ -6,51 +6,38 @@
     width: 300px;
     border: $borderStyle;
 }
-//barre de recherche produits
-#search_bar{
-    border: none;
-    margin: 0;
-}
 
 .inputs:focus{
     outline:none;
     border: $borderStyle;
 }
 
-//Formulaire de recherche mobile version
-#searchForm{
-    padding: 0.2rem;
-    form{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        button{
-            width: 30px;
+// crud
+.crud {
+    form {
+        label {
+            margin-right: 1rem;
         }
-        button:focus {
-            box-shadow: none;
+        #user_roles {
+            input {
+                margin: 0 0.5rem;
+            }
         }
-        input:focus {
-            outline: none;
+        select {
+            margin: 0.5rem;
+            background-color: white;
+            border: none;
         }
     }
 }
-// #########################
-// CLASSES FORMULAIRE CRUD
-// ########################
-form {
-    label {
-        margin-right: 1rem;
-    }
-    #user_roles {
-        input {
-            margin: 0 0.5rem;
+
+// register
+.register {
+    width: 300px;
+    .select-style {
+        select {
+            background-color: white;
+            border: none;
         }
-    }
-    select {
-        margin: 0.5rem;
-        background-color: white;
-        border: none;
     }
 }

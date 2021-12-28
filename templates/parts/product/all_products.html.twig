@@ -4,10 +4,10 @@
 
 {% block body %}   
 
-<div class="container mt-5 mb-5">
-<p>zedfrgthj</p>
-    {# {% for product in products %}
-    <div class="card m-3 row" style="width: 18rem;">
+<h2>Tous nos produits</h2>
+<div class="container mt-2 mb-5 d-flex flex-column align-items-center">
+    {% for product in products %}
+    <div class="card m-3 row" style="width: 15rem;">
             {% for image in product.images %}
             <img class="p-0" src="{{ asset('img/products/'~ image.url) }}" class="card-img-top" alt=" {{ image.alt }} ">
             {% endfor %}
@@ -15,8 +15,8 @@
             <h5 class="card-title"> {{ product.title }} </h5>
             <p class="card-text"> {{ product.price }} €</p>
             <a href="{{ path('detail_product', {'product': product.id }) }}"
-                class="btn myBtn m-3">Détail de l'article</a>
-        </div> #}
+                class="btn myBtn m-3">Voir</a>
+        </div>
     </div>
     {% endfor %}
 </div>

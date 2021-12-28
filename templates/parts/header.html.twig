@@ -1,6 +1,5 @@
 <!--######################### HEADER ####################################-->
 
-<section id="header">
     <!--HEADER DELIVERY RETURN-->
     <div id="barDelivery">
         <div class="delRet">
@@ -12,15 +11,10 @@
             <p>Retour gratuit sous 30 jours</p>
         </div>
     </div>
-    <header>
+    <header class="d-flex justify-content-center align-items-center">
+
         <!--LOGO BASKET NAVBAR-->
         <div id="navBarr">
-            <a href="{{ path('default') }}"><img id="logo" src=" {{ asset('img/logo.svg') }} "
-                    alt="Logo La Nîmes'Alerie"></a>
-                <!--LOGO CARD CONNEXION-->
-                <a href=" {{ path('search') }} " class="btn btn-outline-orange"><img width="18px" src=" {{ asset('img/search.svg') }} " alt="Rechercher un produit"></a>
-                <a href="{{ path('app_login') }}"><img src=" {{ asset('img/connexion.png') }} " alt="Logo connexion" width="25px"></a>
-                <a href=""><img src=" {{ asset('img/panier.svg') }} " alt="Logo panier" width="25px"></a>
             <!--NAVBAR MOBILE-->
             <nav class="navbar navbar-mobile navbar-expand-lg navbar-light bg-wight dNonePc">
                 <div class="container-fluid myNavBar">
@@ -30,6 +24,9 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
+                             <li class="nav-item">
+                                <a class="nav-link" href=" {{ path('default') }} ">Accueil</a>
+                            </li>
                             <li class="nav-item">
                                 {% for category in categories %}
                                 {% if category.parent == false %}
@@ -49,11 +46,24 @@
                     </div>
                 </div>
             </nav>
+            {# LOGO #}
+            <a href="{{ path('default') }}"><img id="logo" src=" {{ asset('img/logo.svg') }} "
+                    alt="Logo La Nîmes'Alerie"></a>
+            <div class="icons">
+            <!--LOGO CARD CONNEXION-->
+            <a href=" {{ path('search') }} "><img width="18px"
+                    src=" {{ asset('img/magnifier.png') }} " alt="Rechercher un produit"></a>
+            <a href=""><img src=" {{ asset('img/panier.png') }} " alt="Logo panier" width="20px"></a>
+            <a href="{{ path('app_login') }}"><img src=" {{ asset('img/login.png') }} " alt="Logo connexion"
+                    width="22px"></a>
+            </div>
         </div>
+
         <!--NAVBAR PC-->
-        <nav class="navbar navPc navbar-expand-lg navbar-light bg-white dNone">
+        <nav class="navbar navbar-pc navbar-expand-lg navbar-light bg-white dNone container-fluid">
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav text-uppercase fs-4">
+                <div class="navbar-nav text-uppercase fs-4 d-flex flex-row justify-content-around w-100">
+                    <a class="nav-item nav-link active" href=" {{ path('default') }} ">Accueil</a>
                     {% for category in categories %}
                     {% if category.parent == false %}
                     <a class="nav-item nav-link active"
@@ -66,5 +76,3 @@
             </div>
         </nav>
     </header>
-
-</section>

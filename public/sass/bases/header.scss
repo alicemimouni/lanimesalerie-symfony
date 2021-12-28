@@ -2,164 +2,128 @@
 //HEADER #
 // #######
 body {
-    // header section
-    #header {
+
+    // header
+    header {
+
+        // navbar pc
+        .navbar-pc {
+            a {
+                font-size: 1.3rem;
+            }
+            a:hover {
+                background-color: $color2;
+            }
+            padding-top: 0;
+            
+        }
+            // navbar mobile
+            #navbarNav {
+            ul {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                padding-left: 2rem;
+                padding-bottom: 1rem;
+                li {
+                    text-transform: uppercase;
+                    font-size: 1.5rem;
+                }
+                li:last-child {
+                    margin-right: 0;
+                }
+            }
+            background-color: white;
+            position: absolute;
+            top: 0px;
+            width: 10rem;
+            a {
+                color: $color4;
+                font-size: 1rem;
+            }
+            border-radius: 20px;  
+        }
+        .navPc {
+            width: 100%;
+        }
+        #navBarr {
+            padding-right: 0.8rem;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // icons card login search
+            .icons {
+                img {
+                    margin-right: 0.5rem
+                }
+            }
+            // mobile navbar
+            .navbar-mobile {
+                .myNavBar {
+                    .navbar-toggler {
+                        padding: 0;
+                        border: none;
+                    }
+                    .navbar-toggler:focus {
+                        box-shadow: none;
+                        padding: 0;
+                        line-height: 0;
+                    }
+                }
+            }
+        }
 
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
         justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        opacity: .9;
+        position: sticky;
+        // border-bottom: 2px solid $color1;
+        box-shadow: 0 5px 5px -2px $color2;
+        top: -1px;
+        background-color: white;
+        z-index: 1;
+        width: 100%;
 
-        // header
-        header {
-
-             #navbarNav {
-                ul {
-                    li {
-                        text-transform: uppercase;
-                        font-size: 1.5rem;
-                    }
-                    li:last-child {
-                        margin-right: 0;
-                    }
-                }
-                background-color: white;
-                position: absolute;
-                right: 0px;
-                top: 8vh;
-                width: 10rem;
-                a {
-                    color: $color4;
-                    font-size: 1rem;
-                }
-                border-radius: 20px;
-               
+        //logo lanimesalerie   
+        #logo {
+            width: 10rem;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        button {
+            background-color: white;
+            border: none;
+        }
+        button:focus {
+            box-shadow: none;
+        }
+    }
+    
+    //delivery return bar
+    #barDelivery {
+        .dNone {
+            display: none!important;
+        }
+        display: flex;
+        justify-content: space-between;
+        background-color: $color2;
+        width: 100%;
+        .delRet {
+            p {
+                padding-left: 1rem;
             }
-            .navPc {
-                width: 100%;
-            }
-            .navbar-nav {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-            }
-            #navBarr {
-                padding-right: 0.8rem;
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: 1rem;
-                // icons card login search
-                .icons {
-                    margin-right: 1rem;
-                    img {
-                        margin-right: 0.5rem
-                    }
-                }
-                // mobile navbar
-                .navbar-mobile {
-                    .myNavBar {
-                        ul {
-                            padding-left: 2rem;
-                            padding-bottom: 1rem;
-                        }
-                        .navbar-toggler {
-                            padding: 0;
-                            border: none;
-                        }
-                        .navbar-toggler:focus {
-                            box-shadow: none;
-                            padding: 0;
-                            line-height: 0;
-                        }
-                    }
-                }
-            }
-
             display: flex;
-            flex-direction: row;
             justify-content: center;
             align-items: center;
-            flex-wrap: wrap;
-            opacity: .9;
-            position: sticky;
-            top: -1px;
-            background-color: white;
-            z-index: 1;
             width: 100%;
-
-            //logo connexion card nav bar    
-            #pc_search {
-                width: 320px;
-            }
-            
-            // commexion and card bar
-            .logos {
-                a {
-                    margin-right: 1.5rem;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-                display: flex;
-                .icon {
-                    width: 25px;
-                }
-            }
-            //logo lanimesalerie   
-            #logo {
-                width: 10rem;
-            }
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            button {
-                background-color: white;
-                border: none;
-            }
-            button:focus {
-                box-shadow: none;
-            }
-        }
-        
-        //searchbar product
-        .search {
-            display: flex;
-            border: $borderStyle;
-            border-radius: $borderRadius;
-            width: 280px;
-            height: 2.5rem;
-            margin: 1rem;
-            button {
-                .icon {
-                    width: 20px;
-                }
-            }
-        }
-        //delivery return bar
-        #barDelivery {
-            .dNone {
-                display: none!important;
-            }
-            display: flex;
-            justify-content: space-between;
-            background-color: $color2;
-            margin-bottom: 1rem;
-            width: 100%;
-            .delRet {
-                p {
-                    margin: 1rem;
-                    padding-left: 1rem;
-                }
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                img {
-                    width: 40px;
-                    margin: 0.3rem 0;
-                }
+            img {
+                width: 40px;
+                margin: 0.3rem 0;
             }
         }
     }

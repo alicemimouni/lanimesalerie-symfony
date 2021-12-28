@@ -83,20 +83,11 @@
             .dNonePc {
                 display: none;
             }
-            .dNone {
-                display: flex;
-            }
-            // card commexion logos
+            // card conneexion logos
             header {
-                .dNone {
+
+                .navbar-pc, .navbar-pc .navbar-collapse {
                     display: flex;
-                }
-                .logos {
-                    margin-right: 2rem;
-                    .icon,
-                    button .icon {
-                        width: 30px;
-                    }
                 }
             }
             // return delivery bar
@@ -105,12 +96,13 @@
                     display: flex!important;
                 }
             }
-            
+        
             // infos section
             #infos {
                 flex-direction: row;
                 justify-content: space-around;
             }
+
             //notices customers
             #avis {
                 .container {
@@ -121,7 +113,6 @@
         }
     }
 }
-
 
 //MIN 620 PX
 @media screen and (min-width:620px) {
@@ -137,12 +128,6 @@
         #navBarr {
             #logo {
                 width: 15rem;
-                margin-bottom: 1rem;
-            }
-            .logos {
-                button {
-                    margin-right: 2rem;
-                }
             }
         }
 

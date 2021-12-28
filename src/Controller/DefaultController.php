@@ -69,7 +69,7 @@ class DefaultController extends AbstractController
      */
     public function allProducts(ProductRepository $productRepository): Response
     {
-        return $this->render('product/all_products.html.twig', [
+        return $this->render('parts/product/all_products.html.twig', [
             'products' => $productRepository->findAll(),
         ]);
     }

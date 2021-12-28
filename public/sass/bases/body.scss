@@ -2,20 +2,23 @@ body {
 
     margin: 0;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
 
     #bloc_page {
-
+        box-shadow: 0 10px 35px 0 rgb(0 0 0 / 18%);;
+        border: none;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        max-width: 1280px;
 
         .dNone {
             display: none;
         }
         h1 {
             margin: 1rem;
-            margin-top: 0;
             margin-bottom: 2rem;
             text-align: center;
         }
