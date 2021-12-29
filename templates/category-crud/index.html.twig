@@ -10,8 +10,6 @@
         <thead>
             <tr>
                 <th>Identifiant</th>
-                <th>Date de début</th>
-                <th>Date de fin</th>
                 <th>Nom</th>
                 <th>Catégorie parente</th>
                 <th>Actions</th>
@@ -21,8 +19,6 @@
             {% for category in categories %}
             <tr>
                 <td>{{ category.id }}</td>
-                <td>{{ category.beginDate ? category.beginDate|date('Y-m-d') : '' }}</td>
-                <td>{{ category.endDate ? category.endDate|date('Y-m-d') : '' }}</td>
                 <td>{{ category.name }}</td>
                 <td>{{ category.parent }}</td>
                 <td>

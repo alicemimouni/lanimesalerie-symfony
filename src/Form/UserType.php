@@ -3,16 +3,13 @@
 namespace App\Form;
 
 use App\Entity\User;
-use App\Entity\Address;
+use App\Form\AddressType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
-use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -99,18 +96,9 @@ class UserType extends AbstractType
                     'class'=> 'form-label'
                 ]
             ])
-            // ->add('address', EntityType::class, [
-            //     'class'=> Address::class,
-            //     'multiple'=> true,
-            //     'expanded'=> true,
-            //     'label' => 'Adresse',
-            //     'attr' => [
-            //         'class'=> 'form-control mb-3 input-checkbox',
-            //     ],
-            //     'label_attr'=> [
-            //         'class'=> 'form-label m-2'
-            //     ]
-            // ])
+            ->add('address', AddressType::class, [
+                'label' => false
+            ])
         ;
     }
 

@@ -3,11 +3,11 @@
 {% block title %}Ajouter une catégorie{% endblock %}
 
 {% block body %}
-<div class="container">
+<div class="container crud">
     <h1 class="margin-left-none mt-5">Ajouter une catégorie</h1>
 
-{{ include('category/_form.html.twig') }}
+{{ include('category-crud/_form.html.twig') }}
 
-    <a class="text-danger" href="{{ path('category_index') }}">Retour à la liste des catégories</a>
+    <a class="text-danger d-block mb-5" href="{{ path('category_index') }}">Retour à la liste des catégories</a>
 </div>
 {% endblock %}

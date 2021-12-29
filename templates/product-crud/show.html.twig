@@ -18,7 +18,7 @@
                 <td>{{ product.title }}</td>
             </tr>
             <tr>
-                <th>Prix</th>
+                <th>Prix en €</th>
                 <td>{{ product.price }}</td>
             </tr>
             <tr>
@@ -37,14 +37,14 @@
                 <th>Catégories</th>
                 <td>
                 {% for category in product.categories %}
-                {{category.name}}
+                {{category.name}} <br>
                 {% endfor %}
                 </td>
             </tr>
             <tr>
                 <th>Images</th>
                 <td>{% for image in product.images %}
-                    {{image.url}}
+                    <img src="{{ asset('img/products/'~image.url) }}" width="100px">
                     {% endfor %}
                 </td>
             </tr>
@@ -64,7 +64,7 @@
     </table>
     <a class="text-capitalize btn btn-outline-warning text-warning mt-4 mb-4" href="{{ path('product_edit', {'id': product.id}) }}">éditer</a>
 
-    {{ include('product/_delete_form.html.twig') }}
+    {{ include('product-crud/_delete_form.html.twig') }}
 
      <a class="text-success"  href="{{ path('product_index') }}">Retour à la liste</a>
 

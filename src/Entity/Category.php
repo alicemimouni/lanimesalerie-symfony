@@ -25,20 +25,6 @@ class Category
     private $id;
 
     /**
-     * @var \DateTime|null
-     *
-     * @ORM\Column(name="beginDate", type="date", nullable=true)
-     */
-    private $beginDate;
-
-    /**
-     * @var \DateTime|null
-     *
-     * @ORM\Column(name="endDate", type="date", nullable=true)
-     */
-    private $endDate;
-
-    /**
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=50, nullable=false)
@@ -79,30 +65,6 @@ class Category
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getBeginDate(): ?\DateTimeInterface
-    {
-        return $this->beginDate;
-    }
-
-    public function setBeginDate(?\DateTimeInterface $beginDate): self
-    {
-        $this->beginDate = $beginDate;
-
-        return $this;
-    }
-
-    public function getEndDate(): ?\DateTimeInterface
-    {
-        return $this->endDate;
-    }
-
-    public function setEndDate(?\DateTimeInterface $endDate): self
-    {
-        $this->endDate = $endDate;
-
-        return $this;
     }
 
     public function getName(): ?string

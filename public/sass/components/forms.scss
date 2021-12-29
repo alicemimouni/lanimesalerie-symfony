@@ -2,7 +2,7 @@
 // delete blue shadow bootstrap
 body {
     #bloc_page {
-        input:focus, button:focus {
+        input:focus, button:focus, select:focus {
             box-shadow: none;
         }
     }
@@ -23,6 +23,10 @@ body {
             margin: 0.5rem;
             background-color: white;
             border: none;
+        }
+        #category_parent, #product_isonsale, #user_isMan {
+            border: $borderStyle;
+            margin: 0;
         }
     }
 }

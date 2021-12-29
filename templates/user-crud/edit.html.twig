@@ -4,12 +4,12 @@
 
 {% block body %}
 
-<div class="container mb-5 w-50">
+<div class="container mb-5 w-50 crud">
     <h1 class="mt-5 margin-left-none text-capitalize">édition</h1>
 
-    {{ include('user/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+    {{ include('user-crud/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
 
-    {{ include('user/_delete_form.html.twig') }}
+    {{ include('user-crud/_delete_form.html.twig') }}
 
     <a class="text-success" href="{{ path('user_index') }}">Retour à la liste</a>
 </div>
