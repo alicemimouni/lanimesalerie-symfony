@@ -44,7 +44,7 @@ class DefaultController extends AbstractController
     public function findByCategory($category, CategoryRepository $categoryRepository): Response
     {
         $categories = $categoryRepository->findBy(['id' => $category]);
-        return $this->render('parts/product/product_by_category.html.twig', [
+        return $this->render('product/product_by_category.html.twig', [
             'categories' => $categories
         ]);
     } 
@@ -56,7 +56,7 @@ class DefaultController extends AbstractController
      */
     public function getOneProduct(Product $product): Response
     {
-        return $this->render('parts/product/detail_product.html.twig', [
+        return $this->render('product/detail_product.html.twig', [
             'product' => $product,
         ]);
     }
@@ -69,7 +69,7 @@ class DefaultController extends AbstractController
      */
     public function allProducts(ProductRepository $productRepository): Response
     {
-        return $this->render('parts/product/all_products.html.twig', [
+        return $this->render('product/all_products.html.twig', [
             'products' => $productRepository->findAll(),
         ]);
     }

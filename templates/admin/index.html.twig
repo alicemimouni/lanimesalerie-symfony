@@ -3,7 +3,9 @@
 {% block title %}Espace administrateur{% endblock %}
 
 {% block body %}
-    <body class="background-cofee">
-    <h1 class="m-4 text-capitalize title display-2">Bonjour {{ app.user.firstname }} !</h1>
-    </body>
+
+<div class="container-fluid background-cofee" style="height: 400px;">
+    <p class="m-4 text-capitalize fs-3">Bonjour {{ app.user.firstname }} !</p>
+</div>
+
 {% endblock %}

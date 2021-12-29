@@ -7,8 +7,6 @@ body {
             border-radius: $borderRadius;
             padding: 0.5rem 1rem;
             margin: 1rem 0;
-            background-color: $color1;
-            color: white;
             text-align: center;
         }
         .myBtn:hover {
@@ -21,6 +19,7 @@ body {
             width: 10rem;
         }
 
+        // delete blue shadow bootstrap 
         .navbar-toggler:focus {
             box-shadow: none;
         }
@@ -28,6 +27,19 @@ body {
         // buttons outline warning
         .btn-outline-warning:hover {
             color: white !important;
+        }
+
+        // buttons outline color base
+        .button-outline-color-base, .button-color-base:hover {
+            color: $color1;
+            background-color: transparent;
+            border: 1px solid $color1;
+        }
+
+        // buttons color base
+        .button-color-base, .button-outline-color-base:hover {
+            background-color: $color1;
+            color: white;
         }
     }
 }

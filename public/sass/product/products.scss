@@ -1,10 +1,16 @@
-.cards-container {
-    .card {
-
-        height: 28rem;
-        img {
-            width: 15rem;
-            height: 15rem;
+.products {
+    background-color: $color2;
+    padding-bottom: 2rem;
+    .cards-container {
+        .card {
+            border: none;
+            p {
+                font-weight: bold;
+            }
+            img {
+                height: 15rem;
+            }
         }
     }
 }
+

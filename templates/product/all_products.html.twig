@@ -1,0 +1,37 @@
+{% extends 'base-site.html.twig' %}
+
+{% block title %}Produits{% endblock %}
+
+{% block body %}
+<section class="products">
+    <h2>Tous nos produits</h2>
+    <div class="cards-container mt-2 mb-5 d-flex flex-wrap justify-content-center align-items-center">
+        {% for product in products %}
+        <div class="card m-3 row" style="width: 15rem;">
+            {% for image in product.images %}
+            <img class="p-0" src="{{ asset('img/products/'~ image.url) }}" class="card-img-top" alt=" {{ image.alt }} ">
+            {% endfor %}
+            <div class="card-body text-center">
+                <h5 class="card-title fs-6"> {{ product.title }} </h5>
+                <p class="card-text"> {{ product.price }} €</p>
+                <a href="{{ path('detail_product', {'product': product.id }) }}" class="btn button-color-base m-3">Voir
+                    l'article</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% block bestSeller %}
+{% include 'parts/bestseller.html.twig' %}
+{% endblock bestSeller %}
+
+{% block newsletter %}
+{% include 'parts/newsletter.html.twig' %}
+{% endblock newsletter %}
+
+{% block infos %}
+{% include 'parts/infos.html.twig' %}
+{% endblock infos %}
+
+{% endblock body %}

@@ -2,11 +2,10 @@ body {
 
     margin: 0;
     box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-
+   
     #bloc_page {
-        box-shadow: 0 10px 35px 0 rgb(0 0 0 / 18%);;
+        margin: auto;
+        box-shadow: 0 10px 35px 0 rgb(0 0 0 / 18%);
         border: none;
         display: flex;
         flex-direction: column;
@@ -49,18 +48,18 @@ body {
             }
         }
 
-        // ############
-        // CLASSES CSS 
-        // ############
 
-        // AFFICHE IMAGE CAFE EN FOND
+        // background image cofee
         .background-cofee {
             background-image: url('../../img/cafe-interface-admin.jpg');
-            background-size: cover;
+            background-size: contain;
+            background-repeat: no-repeat;
+            @media screen and (min-width:600px) {
+                background-size: cover;
+            }
         }
 
-        // LAYOUT CLASSES 
-        // ###############
+        // layout
         .margin-left-none {
             margin-left: 0 !important;
         }
@@ -76,5 +75,6 @@ body {
         .margin-right {
             margin-right: 0.5rem;
         }
+  
     }
 }

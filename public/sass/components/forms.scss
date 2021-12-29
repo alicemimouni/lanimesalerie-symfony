@@ -1,15 +1,11 @@
-// input type text
-.inputs{
-    border-radius: $borderRadius;
-    padding: 0.5rem 1rem;
-    margin: 1rem;
-    width: 300px;
-    border: $borderStyle;
-}
 
-.inputs:focus{
-    outline:none;
-    border: $borderStyle;
+// delete blue shadow bootstrap
+body {
+    #bloc_page {
+        input:focus, button:focus {
+            box-shadow: none;
+        }
+    }
 }
 
 // crud
@@ -40,4 +36,28 @@
             border: none;
         }
     }
+}
+
+// searchbar
+.searchbar {
+    width: 280px;
+    margin: 1rem;
+    border: $borderStyle;
+    border-radius: $borderRadius;
+    form {
+        display: flex;
+        input {
+            border: none;
+            margin-left: 0.7rem;
+        }
+        button {
+            width: 30px;
+        }
+    }
+}
+
+// login form
+.login-form {
+    width: 300px;
+    box-shadow: 0 10px 35px 0 rgb(0 0 0 / 18%);
 }

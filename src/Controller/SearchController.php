@@ -12,7 +12,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class SearchController extends AbstractController
 {
     /**
-     * @Route("/search", name="search")
+     * @Route("/recherche", name="search")
      */
     public function search(ProductRepository $productRepository, Request $request): Response
     {

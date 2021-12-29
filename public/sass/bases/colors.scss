@@ -1,33 +1,16 @@
-//########
-//COLORS
-//#########
+// placeholder color
 input::placeholder {
     color: $color5;
 }
-.myNavBar {
-    ul {
-        li {
-            color: $color4;
-        }
-    }
-}
 
-
-// ##################
-// CLASSES CSS
-// ###############
-
-//BACKGROUND ORANGE
+//orange background
 .colorBaseBgd {
     background-color : $color1;
 }
 
-//TEXT ORANGE
+//orange text
 .colorBaseText {
     color: $color1!important;
 }
 
-.lightGreenBgd {
-    background-color: #F9FBE7;
-}
 

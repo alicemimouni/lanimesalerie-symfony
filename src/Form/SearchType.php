@@ -17,7 +17,7 @@ class SearchType extends AbstractType
                 'required' =>false,
                 'label' =>false,
                 'attr' => [
-                        'style' =>'border: none',
+                        'class' => 'form-control',
                         'placeholder' => 'Recherche de produits...',
                         
                 ]         

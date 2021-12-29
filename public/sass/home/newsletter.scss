@@ -1,25 +1,17 @@
-#newsletter{
+#newsletter {
+    background-color: $color2;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 1rem;
-    h2{
+    
+    h2 {
         margin-bottom: 0;
         font-size: 1.5rem;
     }
-    p{
-        font-size: 1.4rem;
-        margin-top: 0;
-        margin-bottom: 2rem;
-        font-weight: bold;
-    }
-    div{
+    div {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-    img{
-        margin-top: 2rem;
     }
 }
