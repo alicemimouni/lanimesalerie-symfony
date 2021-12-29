@@ -22,7 +22,7 @@ class CategoryController extends AbstractController
      */
     public function index(CategoryRepository $categoryRepository): Response
     {
-        return $this->render('category/index.html.twig', [
+        return $this->render('category-crud/index.html.twig', [
             'categories' => $categoryRepository->findAll(),
         ]);
     }
@@ -44,7 +44,7 @@ class CategoryController extends AbstractController
             return $this->redirectToRoute('category_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('category/new.html.twig', [
+        return $this->renderForm('category-crud/new.html.twig', [
             'category' => $category,
             'form' => $form,
         ]);
@@ -55,7 +55,7 @@ class CategoryController extends AbstractController
      */
     public function show(Category $category): Response
     {
-        return $this->render('category/show.html.twig', [
+        return $this->render('category-crud/show.html.twig', [
             'category' => $category,
         ]);
     }
@@ -74,7 +74,7 @@ class CategoryController extends AbstractController
             return $this->redirectToRoute('category_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('category/edit.html.twig', [
+        return $this->renderForm('category-crud/edit.html.twig', [
             'category' => $category,
             'form' => $form,
         ]);

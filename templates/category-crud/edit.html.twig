@@ -3,12 +3,12 @@
 {% block title %}Editer une catégorie{% endblock %}
 
 {% block body %}
-   <div class="container">
+   <div class="container crud">
     <h1 class="mt-5 margin-left-none text-capitalize">éditer une catégorie</h1>
 
-    {{ include('category/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+    {{ include('category-crud/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
 
-    {{ include('category/_delete_form.html.twig') }}
+    {{ include('category-crud/_delete_form.html.twig') }}
 
     <a class="text-success" href="{{ path('category_index') }}">Retour à la liste des catégories</a>
 

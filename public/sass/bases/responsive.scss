@@ -80,10 +80,35 @@
 
         #bloc_page {
 
+            .detail-product {
+                .card-product {
+                    .content-product {
+                        h2 {
+                            margin: 0 1rem;
+                        }
+                        h3 {
+                            margin: 1rem;
+                        }
+                        p {
+                            text-align: start!important;
+                        }
+                        .btn {
+                            margin: 0.5rem 1rem;
+                        }
+                        .check-delivery {
+                            margin: 1rem;
+                        }
+                        align-items: flex-start!important;
+                    }
+                    flex-direction: row;
+                    align-items: flex-start!important;
+                }
+            }
+
             .dNonePc {
                 display: none;
             }
-            // card conneexion logos
+            // card connexion logos
             header {
 
                 .navbar-pc, .navbar-pc .navbar-collapse {

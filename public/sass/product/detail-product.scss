@@ -1,22 +1,26 @@
 .detail-product {
     .card-product {
+        max-width: 980px;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         .image-product {
-            width: 250px;
-            height: 250px;
+            width: 300px;
+            height: 300px;
         }
         .content-product{
+            .check-delivery {
+                width: 300px;
+            }
             h2 {
-                margin: 2rem 0;
+                margin: 1rem 0;
                 padding: 0!important;
                 font-size: 1.5rem!important;
                 font-weight: 700;
             }
         }  
         .btn {
-            margin: 3rem 0;
+            margin: 1rem 0;
         }  
     }
     

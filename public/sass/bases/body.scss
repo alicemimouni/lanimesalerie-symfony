@@ -52,11 +52,8 @@ body {
         // background image cofee
         .background-cofee {
             background-image: url('../../img/cafe-interface-admin.jpg');
-            background-size: contain;
+            background-size: cover;
             background-repeat: no-repeat;
-            @media screen and (min-width:600px) {
-                background-size: cover;
-            }
         }
 
         // layout

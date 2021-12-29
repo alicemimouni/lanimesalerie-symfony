@@ -36,8 +36,8 @@
 <div class="container">
 <a class="btn btn-outline-warning text-warning mt-4 mb-4" href="{{ path('category_edit', {'id': category.id}) }}">éditer</a>
 
-{{ include('category/_delete_form.html.twig') }}
+{{ include('category-crud/_delete_form.html.twig') }}
 
-<a class="text-success" href="{{ path('category_index') }}">Retour à la liste des catégories</a>
+<a class="text-success d-block mb-5" href="{{ path('category_index') }}">Retour à la liste des catégories</a>
 </div>
 {% endblock %}
