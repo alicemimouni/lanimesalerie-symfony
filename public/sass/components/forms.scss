@@ -2,7 +2,7 @@
 // delete blue shadow bootstrap
 body {
     #bloc_page {
-        input:focus, button:focus, select:focus {
+        input:focus, .btn:focus, select:focus {
             box-shadow: none;
         }
     }
@@ -33,6 +33,8 @@ body {
 
 // register
 .register {
+    border: $borderStyle;
+    box-shadow: 0 0 0.7rem rgba(117, 102, 102, 0.7);
     width: 300px;
     .select-style {
         select {

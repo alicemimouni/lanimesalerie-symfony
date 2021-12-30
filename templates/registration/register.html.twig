@@ -3,12 +3,23 @@
 {% block title %}Inscription{% endblock %}
 
 {% block body %}
-<div class="container register m-4 mt-0">
-    <h2 class="colorBaseText">Inscription</h2>
+<div class="container register m-4 p-4">
+
+    <h2 class="colorBaseText m-3">Inscription</h2>
+
     {{ form_start(registrationForm) }}
-    
-    {{ form_end(registrationForm) }}
+     {{ form_row(registrationForm.isMan) }}
+     {{ form_row(registrationForm.firstname) }}
+     {{ form_row(registrationForm.lastname) }}
+     {{ form_row(registrationForm.email) }}
+     {{ form_row(registrationForm.telNumber) }}
+     {{ form_row(registrationForm.birthDate) }}
+     {{ form_row(registrationForm.address) }}
+     {{ form_row(registrationForm.plainPassword) }}
 
     <button type="submit" class="btn colorBaseBgd text-white mt-3 mb-3">S'inscrire</button>
+
+    {{ form_end(registrationForm) }}
+
 </div>
 {% endblock %}

@@ -74,4 +74,17 @@ class DefaultController extends AbstractController
         ]);
     }
 
+    // GET ALL PRODUCTS
+    // ################
+    /**
+     * @Route("/produits-stars", name="best_sellers", methods={"GET"})
+     * 
+     */
+    public function bestSeller(ProductRepository $productRepository): Response
+    {
+        return $this->render('parts/bestSeller.html.twig', [
+            'products' => $productRepository->findAll(),
+        ]);
+    }
+
 }

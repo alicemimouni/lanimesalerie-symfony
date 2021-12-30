@@ -80,7 +80,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $registrerDate;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Address::class, inversedBy="users")
+     * @ORM\ManyToOne(targetEntity=Address::class, inversedBy="users", cascade={"persist"})
      */
     private $address;
 
