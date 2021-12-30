@@ -24,10 +24,10 @@
              <tr>
                 <th>Role</th>
                {% if user.roles == ["ROLE_ADMIN"] %}
-                        <td>Administrateur</td>
-                        {% else %}
-                        <td>Utilisateur</td>
-                        {% endif %}
+                    <td>Administrateur</td>
+                {% else %}
+                    <td>Utilisateur</td>
+                {% endif %}
             </tr>
             <tr>
                 <th>Nom</th>
