@@ -5,27 +5,36 @@
 {% block body %}
 
 <section class="cart">
-    <div class="container m-3">
+
+    <div class="d-flex align-items-center mb-2">
+        <img class="m-2" src=" {{ asset('img/boutton-retour.svg') }} ">
+        <a href=" {{ path('all_products') }} "
+            class="text-decoration-underline">Retour à la liste des produits</a>
+    </div>
+
+    <div class="container pb-2">
+        <h1 class="pt-3 mt-5">Panier</h1>
         {% if products | length > 0 %}
         <table class="table">
             <thead>
                 <tr>
                     <th scope="col">Article</th>
-                    <th scope="col">Prix</th>
                     <th scope="col">Quantité</th>
                     <th scope="col">Total</th>
                     <th scope="col"></th>
-
                 </tr>
             </thead>
             <tbody>
                 {% for product in products %}
                 <tr>
                     <td> {{ product.product.title }} </td>
-                    <td> {{ product.product.price }} € </td>
                     <td> {{ product.quantity }} </td>
-                    <td> {{ product.product.price * product.quantity }} €</td>
+                    {% if product.product.salePrice %}
+                    <td>{{ product.product.salePrice * product.quantity }}&nbsp;€</td>
+                    {% else %}
+                    <td> {{ product.product.price * product.quantity }}&nbsp;€</td>
                     <td>
+                        {% endif %}
                         <a href=" {{ path('cart_remove', {'id': product.product.id}) }} " class="btn btn-sm"><i
                                 class="bi bi-trash-fill"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
@@ -39,8 +48,7 @@
             <tfoot class="table-warning">
                 <tr>
                     <td colspan="3" class="text-right">Total : </td>
-                    <td> {{ total }} €</td>
-                    <td></td>
+                    <td> {{ total }}&nbsp;€</td>
                 </tr>
             </tfoot>
         </table>

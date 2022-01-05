@@ -19,7 +19,12 @@
         {% endfor %}
         <div class="content-product d-flex flex-column align-items-center">
             <h2> {{ product.title }} </h2>
+            {% if product.salePrice %}
+            <p class="card-text text-decoration-line-through"> {{ product.price }} €</p>
+                <p class="text-danger fs-4"> {{ product.salePrice }} €</p>
+            {% else %}
             <h3 class="colorBaseText mb-2"> {{ product.price }} €</h3>
+            {% endif %}
             <p class=" mb-3 text-center"> {{ product.description }} </p>
             <a href=" {{ path('cart_add', {'id': product.id}) }} " class="btn button-color-base">Ajouter au panier</a>
             <div class="check-delivery mt-3 bold background-color-2 p-3 d-flex flex-column align-items-start justify-content-around">

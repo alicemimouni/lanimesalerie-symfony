@@ -54,7 +54,7 @@ class Product
     /**
      * @var bool|null
      *
-     * @ORM\Column(name="isOnSale", type="boolean", nullable=true)
+     * @ORM\Column(name="isOnSale", type="boolean")
      */
     private $isOnSale;
 
@@ -83,6 +83,11 @@ class Product
      * @ORM\ManyToMany(targetEntity=Category::class, inversedBy="products")
      */
     private $categories;
+
+    /**
+     * @ORM\Column(type="decimal", precision=15, scale=2, nullable=true)
+     */
+    private $salePrice;
 
     public function __construct()
     {
@@ -243,6 +248,18 @@ class Product
     public function removeCategory(category $category): self
     {
         $this->categories->removeElement($category);
+
+        return $this;
+    }
+
+    public function getSalePrice(): ?string
+    {
+        return $this->salePrice;
+    }
+
+    public function setSalePrice(?string $salePrice): self
+    {
+        $this->salePrice = $salePrice;
 
         return $this;
     }

@@ -1,3 +1,6 @@
 .cart {
     min-height: 500px;
+    .container {
+        box-shadow: $boxShadow;
+    }
 }

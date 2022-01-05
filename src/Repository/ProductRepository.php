@@ -63,8 +63,10 @@ class ProductRepository extends ServiceEntityRepository
         if(!empty($filtres['searchBar'])) {
             $query->where('p.title LIKE :search')
             ->orWhere('p.description LIKE :search')
+            ->orWhere('category.name LIKE :search')
             ->setParameter('search', '%'.$filtres['searchBar'].'%');
         }
+        
         return $query->getQuery()->getResult();
     }
 

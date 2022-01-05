@@ -1,27 +1,26 @@
 {% extends 'base-site.html.twig' %}
 
-{% block title %}Produits{% endblock %}
+{% block title %}Soldes{% endblock %}
 
 {% block body %}
 <section class="products">
-    <h2 class="mt-4">Tous nos produits</h2>
+    <h2 class="mt-4 text-uppercase">SOLDES</h2>
     <div class="cards-container mt-2 mb-5 d-flex flex-wrap justify-content-center align-items-center">
         {% for product in products %}
+        {% if product.isOnSale %}
         <div class="card m-3 row" style="width: 15rem;">
             {% for image in product.images %}
             <img class="p-0" src="{{ asset('img/products/'~ image.url) }}" class="card-img-top" alt=" {{ image.alt }} ">
             {% endfor %}
             <div class="card-body text-center">
                 <h5 class="card-title fs-6"> {{ product.title }} </h5>
-                {% if product.salePrice %}
-                <p class="text-danger">{{ product.salePrice }} €</p>
-                {% else %}
-                <p class="card-text">{{ product.price }} €</p>
-                {% endif %}
+                <p class="card-text text-decoration-line-through"> {{ product.price }} €</p>
+                <p class="text-danger fs-4"> {{ product.salePrice }} €</p>
                 <a href="{{ path('detail_product', {'product': product.id }) }}" class="btn button-color-base m-3">Voir
                     l'article</a>
             </div>
         </div>
+        {% endif %}
         {% endfor %}
     </div>
 </section>

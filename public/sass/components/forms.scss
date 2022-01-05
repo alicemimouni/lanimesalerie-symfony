@@ -34,7 +34,7 @@ body {
 // register
 .register {
     border: $borderStyle;
-    box-shadow: 0 0 0.7rem rgba(117, 102, 102, 0.7);
+    box-shadow: $boxShadow;
     width: 300px;
     .select-style {
         select {
@@ -65,5 +65,5 @@ body {
 // login form
 .login-form {
     width: 300px;
-    box-shadow: 0 10px 35px 0 rgb(0 0 0 / 18%);
+    box-shadow: $boxShadow;
 }

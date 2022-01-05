@@ -2,14 +2,14 @@
 
 namespace App\Controller;
 
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
-use App\Entity\Category;
 use App\Entity\Product;
-use App\Repository\ProductRepository;
+use App\Form\ProductType;
 use App\Repository\CategoryRepository;
+use App\Repository\ProductRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Services\ProductService;
 
 class DefaultController extends AbstractController
 {
@@ -39,7 +39,7 @@ class DefaultController extends AbstractController
     // ALL PRODUCTS BY CATEGORY
     // #########################
     /**
-     * @Route("/categorie-{category}", name="products_by_category", methods={"GET"})
+     * @Route("/categorie/{category}", name="products_by_category", methods={"GET"})
      */
     public function findByCategory($category, CategoryRepository $categoryRepository): Response
     {
@@ -52,7 +52,7 @@ class DefaultController extends AbstractController
     // DETAIL ONE PRODUCT
     // ####################
     /**
-     * @Route("/article-{product}", name="detail_product", methods={"GET"})
+     * @Route("/article/{product}", name="detail_product", methods={"GET"})
      */
     public function getOneProduct(Product $product): Response
     {
@@ -67,23 +67,22 @@ class DefaultController extends AbstractController
      * @Route("/produits", name="all_products", methods={"GET"})
      * 
      */
-    public function allProducts(ProductRepository $productRepository): Response
+    public function allProducts(ProductService $productService): Response
     {
         return $this->render('product/all_products.html.twig', [
-            'products' => $productRepository->findAll(),
+            'products' => $productService->getAll(),
         ]);
     }
 
-    // GET ALL PRODUCTS
-    // ################
+    
     /**
-     * @Route("/produits-stars", name="best_sellers", methods={"GET"})
+     * @Route("/soldes", name="sales", methods={"GET"})
      * 
      */
-    public function bestSeller(ProductRepository $productRepository): Response
+    public function bestSeller(ProductService $productService): Response
     {
-        return $this->render('parts/bestSeller.html.twig', [
-            'products' => $productRepository->findAll(),
+        return $this->render('product/sales.html.twig', [
+            'products' => $productService->getAll()
         ]);
     }
 
