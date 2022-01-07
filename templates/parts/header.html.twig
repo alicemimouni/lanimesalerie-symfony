@@ -1,74 +1,71 @@
 <!--######################### HEADER ####################################-->
 
-    <!--HEADER DELIVERY RETURN-->
-    <div id="barDelivery">
-        <div class="delRet">
-            <img src="{{ asset('img/livraison.svg') }}" alt="Logo livraison gratuite">
-            <p>Livraison offerte dès 49 €</p>
-        </div>
-        <div class="delRet dNone">
-            <img src="{{ asset('img/retour.svg') }}" alt="Logo retour gratuit">
-            <p>Retour gratuit sous 30 jours</p>
-        </div>
+<!--HEADER DELIVERY RETURN-->
+<div id="barDelivery">
+    <div class="delRet">
+        <img src="{{ asset('img/livraison.svg') }}" alt="Logo livraison gratuite">
+        <p>Livraison offerte dès 49 €</p>
     </div>
-    <header class="d-flex justify-content-center align-items-center">
+    <div class="delRet return d-none">
+        <img src="{{ asset('img/retour.svg') }}" alt="Logo retour gratuit">
+        <p>Retour gratuit sous 30 jours</p>
+    </div>
+</div>
+<header class="d-flex justify-content-center align-items-center">
 
-        <!--LOGO BASKET NAVBAR-->
-        <div id="navBarr">
-            <!--NAVBAR MOBILE-->
-            <nav class="navbar navbar-mobile navbar-expand-lg navbar-light bg-wight dNonePc">
-                <div class="container-fluid myNavBar">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                {% for category in categories %}
-                                {% if category.parent == false %}
-                                <a class="nav-item nav-link active"
-                                    href=" {{ path('products_by_category', {'category': category.id }) }} ">
-                                    {{ category.name }} </a>
-                                {% endif %}
-                                {% endfor %}
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link colorBaseText" href=" {{ path('sales') }}  ">Promos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            {# LOGO #}
-            <a href="{{ path('default') }}"><img id="logo" src=" {{ asset('img/logo.svg') }} "
-                    alt="Logo La Nîmes'Alerie"></a>
-            <div class="icons">
-            <!--LOGO CARD CONNEXION-->
-            <a href=" {{ path('search') }} "><img width="18px"
-                    src=" {{ asset('img/magnifier.png') }} " alt="Rechercher un produit"></a>
-            <a href=" {{ path('cart') }} "><img src=" {{ asset('img/panier.png') }} " alt="Logo panier" width="20px"></a>
-            <a href="{{ path('app_login') }}"><img src=" {{ asset('img/user.png') }} " alt="Logo connexion"
-                    width="22px"></a>
-            </div>
-        </div>
-
-        <!--NAVBAR PC-->
-        <nav class="navbar navbar-pc navbar-expand-lg navbar-light bg-white dNone container-fluid">
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav text-uppercase fs-4 d-flex flex-row justify-content-around w-100">
-                    {% for category in categories %}
-                    {% if category.parent == false %}
-                    <a class="nav-item nav-link active"
-                        href="{{ path('products_by_category', {'category': category.id }) }}"> {{ category.name }} </a>
-                    {% endif %}
-                    {% endfor %}
-                    <a class="nav-item nav-link colorBaseText" href=" {{ path('sales') }} ">Promos</a>
-                    <a class="nav-item nav-link" href="#">Contact</a>
+    <!--LOGO BASKET NAVBAR-->
+    <div id="bloc-menu">
+        <!--NAVBAR MOBILE-->
+        <nav class="navbar navbar-mobile navbar-expand-lg navbar-light bg-wight dNonePc">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                            {% for category in categories %}
+                            {% if category.parent == false %}
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href=" {{ path('products_by_category', {'category': category.id }) }} ">
+                                {{ category.name }} </a>
+                        </li>
+                            {% endif %}
+                            {% endfor %}
+                        <li class="nav-item">
+                            <a class="nav-link colorBaseText" href=" {{ path('sales') }} ">Promos</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
-    </header>
+        {# LOGO #}
+        <a href="{{ path('default') }}"><img id="logo" src=" {{ asset('img/logo.svg') }} "
+                alt="Logo La Nîmes'Alerie"></a>
+        <div class="icons">
+            <!--LOGO CARD CONNEXION-->
+            <a href=" {{ path('search') }} "><img width="18px" src=" {{ asset('img/magnifier.png') }} "
+                    alt="Rechercher un produit"></a>
+            <a href=" {{ path('cart') }} "><img src=" {{ asset('img/panier.png') }} " alt="Logo panier"
+                    width="20px"></a>
+            <a href="{{ path('app_login') }}"><img src=" {{ asset('img/user.png') }} " alt="Logo connexion"
+                    width="22px"></a>
+        </div>
+    </div>
+
+    <!--NAVBAR PC-->
+    <nav class="navbar navbar-pc navbar-expand-lg navbar-light bg-white dNone container-fluid">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav text-uppercase fs-4 d-flex flex-row justify-content-around w-100">
+                {% for category in categories %}
+                {% if category.parent == false %}
+                <a class="nav-link"
+                    href="{{ path('products_by_category', {'category': category.id }) }}"> {{ category.name }} </a>
+                {% endif %}
+                {% endfor %}
+                <a class="nav-link colorBaseText" href=" {{ path('sales') }} ">Promos</a>
+            </div>
+        </div>
+    </nav>
+</header>

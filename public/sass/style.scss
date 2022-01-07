@@ -1,14 +1,13 @@
 // ########################
 //IMPORT SCSS FILES ######
 // #######################
+@import "../css/bootstrap.css";
 
 //bases
+@import "./bases/responsive.scss";
 @import "./bases/variables.scss";
 @import "./bases/typography.scss";
-@import "./bases/header.scss";
 @import "./bases/body.scss";
-@import "./bases/footer.scss";
-@import "./bases/responsive.scss";
 @import "./bases/colors.scss";
 
 //components
@@ -16,13 +15,15 @@
 @import "./components/forms.scss";
 @import "./components/stars.scss";
 
-//home
-@import "./home/caroussel.scss";
-@import "./home/bestSeller.scss";
-@import "./home/about.scss";
-@import "./home/newsletter.scss";
-@import "./home/notices.scss";
-@import "./home/infos.scss";
+//parts
+@import "./parts/caroussel.scss";
+@import "./parts/bestSeller.scss";
+@import "./parts/about.scss";
+@import "./parts/newsletter.scss";
+@import "./parts/notices.scss";
+@import "./parts/infos.scss";
+@import "./parts/header.scss";
+@import "./parts/footer.scss";
 
 // products
 @import "./product/detail-product.scss";
@@ -36,6 +37,5 @@
 // ###########################
 
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
-@import "../css/bootstrap.css";
 
 

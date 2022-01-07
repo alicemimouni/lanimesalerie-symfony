@@ -1,0 +1,125 @@
+body {
+    #bloc_page {
+
+        // header
+        // #########
+        header {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            opacity: .9;
+            position: sticky;
+            box-shadow: 0 5px 5px -2px $color2;
+            top: -1px;
+            background-color: white;
+            z-index: 1;
+            width: 100%;
+
+            // navbar pc
+            .navbar-pc {
+                a {
+                    font-size: 1.3rem;
+                }
+                a:hover {
+                    color: $color5;
+                }
+                padding-top: 0;
+            }
+            // navbar
+            #navbarNav {
+                ul {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    padding-bottom: 1rem;
+                    li {
+                        text-transform: uppercase;
+                        font-size: 1.5rem;
+                        a {
+                            text-align: center;
+                        }
+                    }
+                    li:last-child {
+                        margin-right: 0;
+                    }
+                }
+                background-color: white;
+                position: absolute;
+                top: 0px;
+                width: 10rem;
+                a {
+                    color: $color4;
+                    font-size: 1rem;
+                }
+                border-radius: 20px;
+            }
+            .navbar-mobile {
+                .navbar-toggler {
+                    padding: 0;
+                    border: none;
+                }
+                .navbar-toggler:focus {
+                    box-shadow: none;
+                    padding: 0;
+                    line-height: 0;
+                }
+            }
+            // menu navbar + icons + logo
+            #bloc-menu {
+                padding-right: 0.8rem;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                // icons cart login search
+                .icons {
+                    img {
+                        margin-right: 0.5rem
+                    }
+                }
+            }
+            //logo lanimesalerie   
+            #logo {
+                width: 10rem;
+            }
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            button {
+                background-color: white;
+                border: none;
+            }
+            button:focus {
+                box-shadow: none;
+            }
+            // class active for current page
+            nav .navbar-nav .active {
+                color: $color5;
+            }
+        }
+
+        //delivery return bar
+        // ###################
+        #barDelivery {
+            display: flex;
+            justify-content: space-between;
+            background-color: $color2;
+            width: 100%;
+            .delRet {
+                p {
+                    padding-left: 1rem;
+                }
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                img {
+                    width: 40px;
+                    margin: 0.3rem 0;
+                }
+            }
+        }
+    }
+}
