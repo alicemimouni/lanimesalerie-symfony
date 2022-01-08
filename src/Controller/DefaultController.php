@@ -44,8 +44,12 @@ class DefaultController extends AbstractController
     public function findByCategory($category, CategoryRepository $categoryRepository): Response
     {
         $categories = $categoryRepository->findBy(['id' => $category]);
+
+        $children = $categoryRepository->findBy(['parent' => $category]);
+
         return $this->render('product/product_by_category.html.twig', [
-            'categories' => $categories
+            'categories' => $categories,
+            'children' =>$children
         ]);
     } 
 
@@ -85,5 +89,5 @@ class DefaultController extends AbstractController
             'products' => $productService->getAll()
         ]);
     }
-
+    
 }
