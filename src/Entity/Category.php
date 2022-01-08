@@ -40,6 +40,7 @@ class Category
     /**
      * @ORM\OneToMany(targetEntity=Category::class, mappedBy="parent", cascade={"remove"})
      */
+    // cascade remove : delete child when parent is deleted
     private $children;
 
     /**
@@ -156,6 +157,5 @@ class Category
 
         return $this;
     }
-
 
 }
