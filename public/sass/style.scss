@@ -3,12 +3,17 @@
 // #######################
 @import "../css/bootstrap.css";
 
+
 //bases
-@import "./bases/responsive.scss";
 @import "./bases/variables.scss";
+@import "./bases/responsive.scss";
 @import "./bases/typography.scss";
 @import "./bases/body.scss";
 @import "./bases/colors.scss";
+
+// products
+@import "./product/detail-product.scss";
+@import "./product/products.scss";
 
 //components
 @import "./components/buttons.scss";
@@ -25,9 +30,6 @@
 @import "./parts/header.scss";
 @import "./parts/footer.scss";
 
-// products
-@import "./product/detail-product.scss";
-@import "./product/products.scss";
 
 // cart
 @import "./cart/cart.scss";

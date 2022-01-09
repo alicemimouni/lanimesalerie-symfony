@@ -1,16 +1,32 @@
-.products {
-    background-color: $color2;
-    padding-bottom: 2rem;
-    .cards-container {
-        .card {
-            border: none;
-            p {
-                font-weight: bold;
+body {
+        // section products
+        .products {
+            background-color: $color2;
+            padding-bottom: 2rem;
+            // sub categories
+            // cards product
+            .sub-categories {
+                background-color: white;
+                .card-category {
+                    border-radius: $borderRadius;
+                    box-shadow: 0 4px 16px 0 rgb(0 0 0 / 4%), 0 1px 4px 0 rgb(0 0 0 / 16%);
+                    img {
+                        height: 130px;
+                    }
+                }
             }
-            img {
-                height: 15rem;
+            .cards-container {
+                .card {
+                    border: none;
+
+                    p {
+                        font-weight: bold;
+                    }
+
+                    img {
+                        height: 15rem;
+                    }
+                }
             }
         }
-    }
 }
-
