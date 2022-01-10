@@ -26,16 +26,6 @@ class CategoryType extends AbstractType
                     'class'=> 'label-control'
                 ]
             ])
-            ->add('beginDate', DateType::class, [
-                'label' => 'Date de début',
-                'attr'=> [
-                    'class'=> 'form-control mb-3']
-            ])
-            ->add('endDate',  DateType::class, [
-                'label' => 'Date de fin',
-                'attr'=> [
-                    'class'=> 'form-control mb-3']
-            ])
             ->add('parent', EntityType::class, [
                 'class'=> Category::class,
                 'required'=> false,

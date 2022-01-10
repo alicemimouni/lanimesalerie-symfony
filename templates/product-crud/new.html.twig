@@ -4,11 +4,11 @@
 
 {% block body %}
 
-<div class="container crud">
+<div class="container crud mb-5">
     <h1 class="mt-5 margin-left-none text-capitalize">Ajouter un article</h1>
 
     {{ include('product-crud/_form.html.twig') }}
 
-    <a href="{{ path('product_index') }}">Retour à la liste des produits</a>
+    <a class="text-success" href="{{ path('product_index') }}">Retour à la liste des produits</a>
 </div>
 {% endblock %}

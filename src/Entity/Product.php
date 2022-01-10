@@ -60,7 +60,7 @@ class Product
 
 
     /**
-     * @ORM\OneToMany(targetEntity=Image::class, mappedBy="product")
+     * @ORM\OneToMany(targetEntity=Image::class, mappedBy="product",orphanRemoval=true, cascade={"persist"})
      */
     private $images;
 

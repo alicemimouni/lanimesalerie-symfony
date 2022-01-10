@@ -6,6 +6,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\ImageRepository;
+use Symfony\Component\HttpFoundation\File\File;
 
 /**
  * Image
@@ -26,7 +27,7 @@ class Image
     /**
      * @var string|null
      *
-     * @ORM\Column(name="url", type="string", length=250, nullable=true)
+     * @ORM\Column(name="url", length=250, nullable=true)
      */
     private $url;
 
@@ -39,6 +40,7 @@ class Image
 
     /**
      * @ORM\OneToOne(targetEntity=Category::class, inversedBy="image", cascade={"persist", "remove"})
+     * @ORM\Column(nullable=true)
      */
     private $category;
 
@@ -112,4 +114,5 @@ class Image
     }
 
     public function __toString() { return $this->url; }
+
 }

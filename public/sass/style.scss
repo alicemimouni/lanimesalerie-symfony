@@ -11,14 +11,14 @@
 @import "./bases/body.scss";
 @import "./bases/colors.scss";
 
-// products
-@import "./product/detail-product.scss";
-@import "./product/products.scss";
-
 //components
 @import "./components/buttons.scss";
 @import "./components/forms.scss";
 @import "./components/stars.scss";
+
+// products
+@import "./product/detail-product.scss";
+@import "./product/products.scss";
 
 //parts
 @import "./parts/caroussel.scss";
@@ -29,10 +29,8 @@
 @import "./parts/infos.scss";
 @import "./parts/header.scss";
 @import "./parts/footer.scss";
+@import "./parts/cart.scss";
 
-
-// cart
-@import "./cart/cart.scss";
 
 // ###########################
 //IMPORT POLICE OXYGEN #

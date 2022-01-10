@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Product;
 use App\Entity\Category;
+use App\Entity\Image;
 use App\Form\ProductType;
 use App\Repository\ProductRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -42,29 +43,29 @@ class ProductController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-            // TODO
-            // #####
-
-            // $imageFile = $form->get('image')->getData();
+            // $images = $form->get('images')->getData();
 
             // // this condition is needed because the 'brochure' field is not required
             // // so the PDF file must be processed only when a file is uploaded
-            // if ($imageFile) {
-            //     $originalFilename = pathinfo($imageFile->getClientOriginalName(), PATHINFO_FILENAME);
+            // foreach ($images as $image) {
+                
+            //     $originalFilename = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
             //     // this is needed to safely include the file name as part of the URL
             //     $safeFilename = $slugger->slug($originalFilename);
-            //     $newFilename = $safeFilename.'-'.uniqid().'.'.$imageFile->guessExtension();
+            //     $newImage = $safeFilename.'-'.uniqid().'.'.$image->guessExtension();
 
             //     // Move the file to the directory where brochures are stored
-            //         $imageFile->move(
-            //             $this->getParameter('image_directory'),
-            //             $newFilename
+            //         $image->move(
+            //             $this->getParameter('images_directory'),
+            //             $newImage
             //         );
             //     // updates the 'brochureFilename' property to store the PDF file name
             //     // instead of its contents
-            // $product->addImage($newFilename);
+            //     $new = new Image();
+            //     $new->setUrl($newImage);
+            //     $product->addImage($new);
             // }
-            //     $product->setIdUser($this->getUser());
+
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($product);
