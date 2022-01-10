@@ -106,7 +106,7 @@ CREATE TABLE `category` (
   PRIMARY KEY (`id`),
   KEY `IDX_64C19C1727ACA70` (`parent_id`),
   CONSTRAINT `FK_64C19C1727ACA70` FOREIGN KEY (`parent_id`) REFERENCES `category` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -115,7 +115,7 @@ CREATE TABLE `category` (
 
 LOCK TABLES `category` WRITE;
 /*!40000 ALTER TABLE `category` DISABLE KEYS */;
-INSERT INTO `category` VALUES (41,NULL,'Chat'),(42,NULL,'Chien'),(43,NULL,'Poisson'),(44,NULL,'Rongeur'),(45,NULL,'Oiseau'),(47,42,'Accessoires'),(48,41,'Accessoires'),(49,43,'Accessoires'),(50,44,'Accessoires'),(51,45,'Accessoires');
+INSERT INTO `category` VALUES (0,NULL,''),(41,NULL,'Chat'),(42,NULL,'Chien'),(43,NULL,'Poisson'),(44,NULL,'Rongeur'),(45,NULL,'Oiseau'),(47,42,'Accessoires'),(48,41,'Accessoires'),(49,43,'Accessoires'),(50,44,'Accessoires'),(51,45,'Accessoires'),(52,42,'Alimentation'),(53,41,'Alimentation'),(54,43,'Alimentation'),(55,44,'Alimentation'),(56,45,'Alimentation');
 /*!40000 ALTER TABLE `category` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -162,7 +162,7 @@ CREATE TABLE `image` (
   KEY `IDX_C53D045F4584665A` (`product_id`),
   CONSTRAINT `FK_C53D045F12469DE2` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`),
   CONSTRAINT `FK_C53D045F4584665A` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=194 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=199 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -171,7 +171,7 @@ CREATE TABLE `image` (
 
 LOCK TABLES `image` WRITE;
 /*!40000 ALTER TABLE `image` DISABLE KEYS */;
-INSERT INTO `image` VALUES (181,NULL,111,'sac-foin-bamby-lapin-rongeur.png','Sac à foin pour rongeur'),(182,NULL,112,'arbre-a-chat-case-cube-bois.png','Arbre à chat avec cubes en bois'),(183,NULL,113,'niche-chien-interieur-boby.png','Niche d\'intérieur en bois pour chien Boby'),(184,NULL,114,'mini-aquarium-poisson-boule.jpg','Aquarium boule pour poisson Nemo'),(185,NULL,115,'panier-chien-plastique-luxe.jpg','Panier pour chien de luxe en plastique transparent'),(186,NULL,116,'suspension-balancoire-oiseau-bois.jpg','Balançoire pour oiseau en bois'),(187,NULL,117,'panier-chat-osier-tendance.jpg','Panier tendance en osier pour chat'),(188,NULL,118,'mangeoire-pour-oiseau-design-blanc.jpg','Mangeoire pour oiseaux design blanc'),(189,47,NULL,'accessoires-pour-chien.jpg','Accessoires pour chiens'),(190,48,NULL,'accessoires-pour-chat.jpg','Accessoires pour chats'),(191,50,NULL,'accessoires-pour-rongeur.jpg','Accessoires pour rongeurs'),(192,49,NULL,'accessoire-pour-poisson.jpg','Accessoires pour poissons'),(193,51,NULL,'accessoires-pour-oiseau.jpg','Accessoires pour oiseaux');
+INSERT INTO `image` VALUES (181,NULL,111,'sac-foin-bamby-lapin-rongeur.png','Sac à foin pour rongeur'),(182,NULL,112,'arbre-a-chat-case-cube-bois.png','Arbre à chat avec cubes en bois'),(183,NULL,113,'niche-chien-interieur-boby.png','Niche d\'intérieur en bois pour chien Boby'),(184,NULL,114,'mini-aquarium-poisson-boule.jpg','Aquarium boule pour poisson Nemo'),(185,NULL,115,'panier-chien-plastique-luxe.jpg','Panier pour chien de luxe en plastique transparent'),(186,NULL,116,'suspension-balancoire-oiseau-bois.jpg','Balançoire pour oiseau en bois'),(187,NULL,117,'panier-chat-osier-tendance.jpg','Panier tendance en osier pour chat'),(188,NULL,118,'mangeoire-pour-oiseau-design-blanc.jpg','Mangeoire pour oiseaux design blanc'),(189,47,NULL,'accessoires-pour-chien.jpg','Accessoires pour chiens'),(190,48,NULL,'accessoires-pour-chat.jpg','Accessoires pour chats'),(191,50,NULL,'accessoires-pour-rongeur.jpg','Accessoires pour rongeurs'),(192,49,NULL,'accessoires-pour-poisson.jpg','Accessoires pour poissons'),(193,51,NULL,'accessoires-pour-oiseau.jpg','Accessoires pour oiseaux'),(194,52,NULL,'alimentation-pour-chien.jpg','Alimentation pour chiens'),(195,53,NULL,'alimentation-pour-chat.jpg','Alimentation pour chats'),(196,55,NULL,'alimentation-pour-rongeur.jpg','Alimentation pour rongeurs'),(197,56,NULL,'alimentation-pour-oiseau.jpg','Alimentation pour oiseaux'),(198,54,NULL,'alimentation-pour-poisson.jpg','Alimentation pour poissons');
 /*!40000 ALTER TABLE `image` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -411,4 +411,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-08 11:52:52
+-- Dump completed on 2022-01-09  9:42:15
