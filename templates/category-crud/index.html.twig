@@ -3,16 +3,15 @@
 {% block title %}Categories{% endblock %}
 
 {% block body %}
-<div class="container">
+<div class="container crud">
     <h1 class="mt-5 margin-left-none">Catégories</h1>
 
-    <table class="table">
+    <table class="table table-warning">
         <thead>
             <tr>
                 <th>Identifiant</th>
                 <th>Nom</th>
-                <th>Catégorie parente</th>
-                <th>Actions</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -20,11 +19,8 @@
             <tr>
                 <td>{{ category.id }}</td>
                 <td>{{ category.name }}</td>
-                <td>{{ category.parent }}</td>
                 <td>
                     <a href="{{ path('category_show', {'id': category.id}) }}">Voir</a>
-                    <span> | </span>
-                    <a href="{{ path('category_edit', {'id': category.id}) }}">Editer</a>
                 </td>
             </tr>
             {% else %}

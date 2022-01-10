@@ -4,16 +4,16 @@
 
 {% block body %}
 
-<div class="container">
+<div class="container crud">
     <h1 class="mt-5 margin-left-none text-capitalize">Utilisateurs</h1>
 
-    <table class="table">
+    <table class="table table-warning">
         <thead>
             <tr>
                 <th>Civilité</th>
                 <th>Nom</th>
                 <th>Prénom</th>
-                <th>Actions</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -26,8 +26,6 @@
                 {# <td>{{ user.birthDate ? user.birthDate|date('Y-m-d') : '' }}</td> #}
                 <td>
                     <a href="{{ path('user_show', {'id': user.id}) }}">Voir</a>
-                    <span> | </span>
-                    <a class="text-capitalize" href="{{ path('user_edit', {'id': user.id}) }}">éditer</a>
                 </td>
             </tr>
         {% else %}
