@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Product;
-use App\Entity\Category;
+use App\Entity\Image;
 use App\Form\ProductType;
 use App\Repository\ProductRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -62,10 +62,11 @@ class ProductController extends AbstractController
             //         );
             //     // updates the 'brochureFilename' property to store the PDF file name
             //     // instead of its contents
-            // $product->addImage($newFilename);
+            // $img = new Image();
+            // $img->setUrl($newFilename);
+            // $product->addImage($img);
             // }
-            //     $product->setIdUser($this->getUser());
-
+           
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($product);
             $entityManager->flush();
