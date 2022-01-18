@@ -30,9 +30,11 @@ class RegistrationController extends AbstractController
                     $form->get('plainPassword')->getData()
                 )
             );
-
+            // accessing the entityManager
             $entityManager = $this->getDoctrine()->getManager();
+            // informs Doctrine that we want to add this object in the database 
             $entityManager->persist($user);
+            // Execute the query and send everything that was persisted before to the DB
             $entityManager->flush();
             // do anything else you need here, like send an email
 
