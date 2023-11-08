@@ -10,6 +10,9 @@ Ce projet est un site e-commerce que j'ai développé de manière autonome dans 
 
 J'ai réalisé la maquette avec Figma.
 
+###Page détail produit
+![Capture d’écran (16)](https://github.com/alicemimouni/lanimesalerie-symfony/assets/82211729/429a86f9-feab-4f07-a9b1-538174bfa721)
+
 Côté front-end, j'utilise le préprocesseur **Sass**, il me permet de mieux organiser mon CSS, je l'ai installé à l'aide du gestionnaire de package **npm**. J'ai utilisé **Bootstrap** surtout pour le tableau de bord.
 
 J'ai choisi d'utiliser le framework **Symfony** pour réaliser ce projet. J'ai créé les templates en utilisant le moteur de template **twig**.
