@@ -19,10 +19,14 @@ J'ai utilisé le préprocesseur **Sass**, il me permet de mieux organiser mon CS
 
 J'ai choisi d'utiliser le framework **Symfony** pour réaliser ce projet. J'ai créé les templates en utilisant le moteur de template **twig**.
 
+[Voir le code des templates twig](https://github.com/alicemimouni/lanimesalerie-symfony/tree/main/templates)
+
 ### Partie backend
 Pour la base de données, j'ai utilisé **MySQL** [Voir la base de données](https://github.com/alicemimouni/lanimesalerie-symfony/blob/main/animalerie.sql)
 
 Voir les étapes de réalisation en détail dans [le dossier projet](https://alicemimouni.github.io/dossier-projet-alice-mimouni.pdf#page=28)
+[Voir le dossier Controller](https://github.com/alicemimouni/lanimesalerie-symfony/tree/main/src/Controller)
+[Voir les entités](https://github.com/alicemimouni/lanimesalerie-symfony/tree/main/src/Entity)
 
 ## Conclusion
 
