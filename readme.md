@@ -17,6 +17,8 @@ Côté front-end, j'utilise le préprocesseur **Sass**, il me permet de mieux or
 
 J'ai choisi d'utiliser le framework **Symfony** pour réaliser ce projet. J'ai créé les templates en utilisant le moteur de template **twig**.
 
+Pour la base de données, j'ai utilisé **MySQL** [Voir la base de données](https://github.com/alicemimouni/lanimesalerie-symfony/blob/main/animalerie.sql)
+
 [Regarder la vidéo de démontration de la page d'accueil](https://youtu.be/E2kFJFzLY1o)
 
 ## Conclusion
