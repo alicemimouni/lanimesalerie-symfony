@@ -22,7 +22,7 @@ J'ai choisi d'utiliser le framework **Symfony** pour réaliser ce projet. J'ai c
 ### Partie backend
 Pour la base de données, j'ai utilisé **MySQL** [Voir la base de données](https://github.com/alicemimouni/lanimesalerie-symfony/blob/main/animalerie.sql)
 
-[Voir le dossier projet](https://alicemimouni.github.io/dossier-projet-alice-mimouni.pdf#page=28)
+Voir les étapes de réalisation en détail dans [le dossier projet](https://alicemimouni.github.io/dossier-projet-alice-mimouni.pdf#page=28)
 
 ## Conclusion
 
