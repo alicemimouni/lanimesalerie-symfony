@@ -4,7 +4,7 @@
 
 ## Présentation
 
-Ce projet est un site e-commerce que j'ai développé de manière autonome dans le cadre de ma formation de développeur fullstack. Jé l'ai présenté lors de ma soutenance Développeur web fullstack. Il s'agit d'une boutique en ligne fictive proposant des produits pour animaux. Le site dispose également d'un espace d'administration permettant la gestion des produits, des clients, des catégories...
+Ce projet est un site e-commerce que j'ai développé de manière autonome dans le cadre de ma formation de développeur fullstack. Je l'ai présenté lors de ma soutenance Développeur web fullstack. Il s'agit d'une boutique en ligne fictive proposant des produits pour animaux. Le site dispose également d'un espace d'administration permettant la gestion des produits, des clients, des catégories...
 
 ## Technologies utilisées
 
