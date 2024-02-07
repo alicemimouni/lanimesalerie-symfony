@@ -4,7 +4,7 @@
 
 ## Présentation
 
-Ce projet est un site e-commerce que j'ai développé de manière autonome dans le cadre de ma formation de développeur fullstack. Je l'ai présenté lors de ma soutenance Développeur web fullstack. Il s'agit d'une boutique en ligne fictive proposant des produits pour animaux. Le site dispose également d'un espace d'administration permettant la gestion des produits, des clients, des catégories...
+Ce projet est un site e-commerce fictif que j'ai développé, mais qui n'est pas encore achevé. Je l'ai présenté lors de ma soutenance Développeur web fullstack. Il s'agit d'une boutique en ligne fictive proposant des produits pour animaux. Le site dispose également d'un espace d'administration permettant la gestion des produits, des clients, des catégories...
 
 ## Technologies utilisées
 
@@ -30,3 +30,4 @@ Voir les étapes de réalisation en détail dans [le dossier projet](https://ali
 ## Conclusion
 
 Cette réalisation a marqué mes débuts avec Symfony, et j'ai considérablement développé mes compétences. J'ai acquis de l'expérience dans la résolution de problèmes et dans la recherche d'informations.
+Je souhaite terminer celui-ci, en ajoutant un système de paiement notamment. Pour gérer le CSS et le JavaScript il conviendrait d'utiliser Symfony Encore et  l’AssetMapper. 
