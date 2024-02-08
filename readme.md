@@ -4,11 +4,11 @@
 
 ## Présentation
 
-Ce projet est un site e-commerce fictif que j'ai développé, mais qui n'est pas encore achevé. Je l'ai présenté lors de ma soutenance Développeur web fullstack. Il s'agit d'une boutique en ligne fictive proposant des produits pour animaux. Le site dispose également d'un espace d'administration permettant la gestion des produits, des clients, des catégories...
+Ce projet est un site e-commerce fictif que j'ai développé, mais qui n'est pas encore achevé. Il s'agit d'une boutique en ligne fictive proposant des produits pour animaux. Le site dispose également d'un espace d'administration permettant la gestion des produits, des clients, des catégories...
 
 ## Technologies utilisées
 
-J'ai réalisé la maquette avec Figma.
+J'ai réalisé la maquette avec **Figma**.
 
 ### Partie front end
 ![Capture d’écran (16)](https://github.com/alicemimouni/lanimesalerie-symfony/assets/82211729/429a86f9-feab-4f07-a9b1-538174bfa721)
