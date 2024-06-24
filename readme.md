@@ -4,7 +4,7 @@
 
 ## Présentation
 
-Ce projet est un site e-commerce fictif que j'ai développé, mais qui n'est pas encore achevé. Il s'agit d'une boutique en ligne fictive proposant des produits pour animaux. Le site dispose également d'un espace d'administration permettant la gestion des produits, des clients, des catégories...
+Ce projet est un site e-commerce fictif que j'ai développé avec le framework Symfony. Il s'agit d'une boutique en ligne fictive proposant des produits pour animaux. Le site dispose également d'un espace d'administration permettant la gestion des produits, des clients, des catégories...
 
 ## Technologies utilisées
 
